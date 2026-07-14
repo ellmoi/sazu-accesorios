@@ -1,1 +1,96 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Registro | Sazu</title><link rel="stylesheet" href="css/styles.css"></head><body><main class="auth"><section class="auth-info"><a class="brand" href="index.html">SAZU <span>ACCESORIOS</span></a><span class="eyebrow" style="color:#70d2c9;margin-top:40px">Únete a Sazu</span><h1 class="page-title">Una cuenta, más beneficios.</h1><p>Compra al detal o solicita precios mayoristas.</p><a class="btn btn-outline" style="width:max-content;background:transparent;color:#fff" href="index.html">← Volver</a></section><section class="auth-main"><form class="form-card" id="registerForm" novalidate><span class="eyebrow">Registro de clientes</span><h2>Crea tu cuenta</h2><div class="grid2"><div class="field"><label>Nombre</label><input id="firstName" required><span class="error"></span></div><div class="field"><label>Apellido</label><input required><span class="error"></span></div><div class="field"><label>Documento</label><input required><span class="error"></span></div><div class="field"><label>Correo</label><input type="email" required><span class="error"></span></div><div class="field"><label>Teléfono</label><input required><span class="error"></span></div><div class="field"><label>Ciudad</label><input required><span class="error"></span></div><div class="field"><label>Dirección</label><input required><span class="error"></span></div><div class="field"><label>Tipo de cliente</label><select><option>Detal</option><option>Mayorista</option></select></div><div class="field"><label>Contraseña</label><input id="password" type="password" required><span class="error"></span></div><div class="field"><label>Confirmar contraseña</label><input id="confirm" type="password" required><span class="error" id="confirmError"></span></div></div><button class="btn btn-primary" style="width:100%">Crear cuenta</button><p style="text-align:center"><a href="login.html">Ya tengo una cuenta</a></p></form></section></main><div class="toast" id="toast"></div><script src="js/app.js"></script></body></html>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Registro | Sazu</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="auth">
+      <section class="auth-info">
+        <a class="brand" href="index.html">SAZU <span>ACCESORIOS</span></a
+        ><span class="eyebrow" style="color: #70d2c9; margin-top: 40px"
+          >Únete a Sazu</span
+        >
+        <h1 class="page-title">Una cuenta, más beneficios.</h1>
+        <p>Compra al detal o solicita precios mayoristas.</p>
+        <a
+          class="btn btn-outline"
+          style="width: max-content; background: transparent; color: #fff"
+          href="index.html"
+          >← Volver</a
+        >
+      </section>
+      <section class="auth-main">
+        <form class="form-card" id="registerForm" novalidate>
+          <span class="eyebrow">Registro de clientes</span>
+          <h2>Crea tu cuenta</h2>
+          <div class="grid2">
+            <div class="field">
+              <label>Nombre</label><input id="firstName" required /><span
+                class="error"
+              ></span>
+            </div>
+            <div class="field">
+              <label>Apellido</label><input required /><span
+                class="error"
+              ></span>
+            </div>
+            <div class="field">
+              <label>Documento</label><input required /><span
+                class="error"
+              ></span>
+            </div>
+            <div class="field">
+              <label>Correo</label><input type="email" required /><span
+                class="error"
+              ></span>
+            </div>
+            <div class="field">
+              <label>Teléfono</label><input required /><span
+                class="error"
+              ></span>
+            </div>
+            <div class="field">
+              <label>Ciudad</label><input required /><span class="error"></span>
+            </div>
+            <div class="field">
+              <label>Dirección</label><input required /><span
+                class="error"
+              ></span>
+            </div>
+            <div class="field">
+              <label>Tipo de cliente</label
+              ><select>
+                <option>Detal</option>
+                <option>Mayorista</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Contraseña</label
+              ><input id="password" type="password" required /><span
+                class="error"
+              ></span>
+            </div>
+            <div class="field">
+              <label>Confirmar contraseña</label
+              ><input id="confirm" type="password" required /><span
+                class="error"
+                id="confirmError"
+              ></span>
+            </div>
+          </div>
+          <button class="btn btn-primary" style="width: 100%">
+            Crear cuenta
+          </button>
+          <p style="text-align: center">
+            <a href="login.html">Ya tengo una cuenta</a>
+          </p>
+        </form>
+      </section>
+    </main>
+    <div class="toast" id="toast"></div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

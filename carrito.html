@@ -1,2 +1,70 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Carrito | Sazu</title><link rel="stylesheet" href="css/styles.css"></head><body><div id="sharedHeader"></div><main><section class="page-hero"><div class="container"><span class="eyebrow">Tu selección</span><h1 class="page-title">Carrito de compras</h1><p>Revisa cantidades y elige tu tipo de compra.</p></div></section><section class="section"><div class="container page-layout"><section class="card"><div class="section-title"><div><h2>Productos</h2></div><div><label class="checks"><input type="radio" name="purchaseType" value="retail" checked> Detal</label><label class="checks"><input type="radio" name="purchaseType" value="wholesale"> Mayor</label></div></div><div id="cartItems"></div></section><aside class="card sticky"><h2>Resumen</h2><div class="total"><span>Subtotal</span><strong data-subtotal></strong></div><div class="total"><span>Envío</span><span>Por calcular</span></div><hr><div class="total grand"><span>Total</span><span data-total></span></div><a class="btn btn-primary" style="width:100%" href="checkout.html">Finalizar pedido</a><a class="btn btn-outline" style="width:100%;margin-top:8px" href="index.html#productos">Continuar comprando</a><p><small>Pagos y precios exclusivamente demostrativos.</small></p></aside></div></section></main><div id="sharedFooter"></div><div class="toast" id="toast"></div><script src="js/products.js"></script><script src="js/app.js"></script><script src="js/cart.js"></script></body></html>
-
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Carrito | Sazu</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="sharedHeader"></div>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Tu selección</span>
+          <h1 class="page-title">Carrito de compras</h1>
+          <p>Revisa cantidades y elige tu tipo de compra.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container page-layout">
+          <section class="card">
+            <div class="section-title">
+              <div><h2>Productos</h2></div>
+              <div>
+                <label class="checks"
+                  ><input
+                    type="radio"
+                    name="purchaseType"
+                    value="retail"
+                    checked
+                  />
+                  Detal</label
+                ><label class="checks"
+                  ><input type="radio" name="purchaseType" value="wholesale" />
+                  Mayor</label
+                >
+              </div>
+            </div>
+            <div id="cartItems"></div>
+          </section>
+          <aside class="card sticky">
+            <h2>Resumen</h2>
+            <div class="total">
+              <span>Subtotal</span><strong data-subtotal></strong>
+            </div>
+            <div class="total"><span>Envío</span><span>Por calcular</span></div>
+            <hr />
+            <div class="total grand">
+              <span>Total</span><span data-total></span>
+            </div>
+            <a class="btn btn-primary" style="width: 100%" href="checkout.html"
+              >Finalizar pedido</a
+            ><a
+              class="btn btn-outline"
+              style="width: 100%; margin-top: 8px"
+              href="index.html#productos"
+              >Continuar comprando</a
+            >
+            <p><small>Pagos y precios exclusivamente demostrativos.</small></p>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <div id="sharedFooter"></div>
+    <div class="toast" id="toast"></div>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

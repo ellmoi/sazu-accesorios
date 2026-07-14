@@ -1,15 +1,344 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Sazu Accesorios: tecnología, moda, bolsos, relojes y fragancias."><title>Sazu Accesorios</title><link rel="stylesheet" href="css/styles.css"></head><body><div id="sharedHeader"></div><main><section class="hero"><div class="container hero-grid"><div><span class="eyebrow">Tu estilo, tu ritmo, tu elección</span><h1>TODO LO QUE BUSCAS <span>EN UN SOLO LUGAR</span></h1><p>Tecnología, moda, accesorios, relojes, bolsos y fragancias para todos los estilos.</p><div class="hero-actions"><a class="btn btn-primary" href="#productos">Comprar ahora →</a><a class="btn btn-outline" href="#categorias">Ver categorías</a></div><div class="trust"><span>✓ Compra fácil</span><span>✓ Atención personalizada</span><span>✓ Cobertura nacional</span></div></div><div class="hero-photo"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85" alt="Tienda de moda y accesorios"><div class="float a">Venta al detal<small>Desde una unidad</small></div><div class="float b">Precio mayorista<small>Haz crecer tu negocio</small></div></div></div><div class="container service-row"><div><strong>Envíos nacionales</strong><small>A toda Colombia</small></div><div><strong>Detal y por mayor</strong><small>Compra como prefieras</small></div><div><strong>Compra con confianza</strong><small>Acompañamiento en cada pedido</small></div></div></section>
-<section class="section" id="categorias"><div class="container"><div class="section-title"><div><span class="eyebrow">Nueve universos</span><h2>Explora nuestras categorías</h2></div><p>Productos actuales y funcionales para diferentes estilos de vida.</p></div><div class="categories">
-<article class="category"><img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=800&q=80" alt="Tecnología"><div><h3>Tecnología</h3><button data-category="Tecnología">Ver productos</button></div></article>
-<article class="category"><img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&q=80" alt="Ropa caballero"><div><h3>Ropa caballero</h3><button data-category="Ropa caballero">Ver productos</button></div></article>
-<article class="category"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80" alt="Ropa dama"><div><h3>Ropa dama</h3><button data-category="Ropa dama">Ver productos</button></div></article>
-<article class="category"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80" alt="Bolsos caballero"><div><h3>Bolsos caballero</h3><button data-category="Bolsos caballero">Ver productos</button></div></article>
-<article class="category"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80" alt="Bolsos dama"><div><h3>Bolsos dama</h3><button data-category="Bolsos dama">Ver productos</button></div></article>
-<article class="category"><img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=800&q=80" alt="Relojes caballero"><div><h3>Relojes caballero</h3><button data-category="Relojes caballero">Ver productos</button></div></article>
-<article class="category"><img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=800&q=80" alt="Relojes dama"><div><h3>Relojes dama</h3><button data-category="Relojes dama">Ver productos</button></div></article>
-<article class="category"><img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=800&q=80" alt="Lociones caballero"><div><h3>Lociones caballero</h3><button data-category="Lociones caballero">Ver productos</button></div></article>
-<article class="category"><img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80" alt="Lociones dama"><div><h3>Lociones dama</h3><button data-category="Lociones dama">Ver productos</button></div></article></div></div></section>
-<section class="section soft" id="productos"><div class="container"><div class="section-title"><div><span class="eyebrow">Compra a tu manera</span><h2>Productos destacados</h2></div><p>Precios demostrativos para una experiencia realista.</p></div><div class="searchbar"><input id="search" type="search" placeholder="Buscar por producto o categoría..." aria-label="Buscar"><button>⌕</button></div><div class="shop"><aside class="filters"><h3>Filtros</h3><div class="field"><label>Categoría</label><select id="category"><option value="">Todas</option></select></div><div class="grid2"><div class="field"><label>Precio mínimo</label><input id="minPrice" type="number"></div><div class="field"><label>Precio máximo</label><input id="maxPrice" type="number"></div></div><div class="field"><label>Disponibilidad</label><select id="availability"><option value="">Todas</option><option>Disponible</option><option>Pocas unidades</option><option>Agotado</option></select></div><label class="checks"><input type="checkbox"> Venta al detal</label><label class="checks"><input type="checkbox"> Venta al por mayor</label><button class="btn btn-outline btn-small" id="clear">Limpiar</button></aside><div><div class="toolbar"><span id="productCount">18 productos</span><select id="sort"><option value="popular">Más populares</option><option value="low">Menor precio</option><option value="high">Mayor precio</option><option value="new">Más recientes</option></select></div><div class="products" id="productGrid"></div></div></div></div></section>
-<section class="section wholesale" id="mayoristas"><div class="container wholesale-grid"><div><span class="eyebrow" style="color:#70d2c9">Para distribuidores</span><h2>Compra al por mayor y haz crecer tu negocio</h2><p>Precios especiales, portafolio variado y atención personalizada.</p><div class="benefits"><div class="benefit"><strong>Precios especiales</strong><br><small>Mejor margen por volumen.</small></div><div class="benefit"><strong>Atención personalizada</strong><br><small>Acompañamiento en cada orden.</small></div><div class="benefit"><strong>Envíos nacionales</strong><br><small>Despachos organizados.</small></div><div class="benefit"><strong>Catálogo variado</strong><br><small>Nueve categorías.</small></div></div><table class="volume"><tr><th>Cantidad</th><th>Beneficio</th></tr><tr><td>1 a 5 unidades</td><td>Precio normal</td></tr><tr><td>6 a 12 unidades</td><td>Descuento básico · 8%</td></tr><tr><td>13 a 24 unidades</td><td>Descuento medio · 15%</td></tr><tr><td>25 o más</td><td>Precio mayorista · hasta 25%</td></tr></table><div class="hero-actions"><a class="btn btn-outline" href="#productos">Ver catálogo mayorista</a></div></div><form class="form-card" id="wholesaleForm"><span class="eyebrow">Hablemos</span><h3>Solicita una cotización</h3><div class="grid2"><div class="field"><label>Nombre</label><input required></div><div class="field"><label>Negocio</label><input required></div><div class="field"><label>Teléfono</label><input required></div><div class="field"><label>Ciudad</label><input required></div></div><div class="field"><label>Productos de interés</label><textarea rows="4" required></textarea></div><button class="btn btn-primary">Enviar solicitud</button><p class="form-message" id="wholesaleMessage"></p></form></div></section></main><div id="sharedFooter"></div>
-<div class="modal" id="productModal"><div class="backdrop" data-close></div><div class="modal-panel"><button class="icon close" data-close>×</button><div id="detailContent"></div></div></div><aside class="drawer" id="cartDrawer"><div class="backdrop" data-close-drawer></div><div class="drawer-panel"><div class="drawer-head"><h2>Tu carrito</h2><button class="icon" data-close-drawer>×</button></div><div class="drawer-items" id="drawerItems"></div><div class="total grand"><span>Total</span><span data-total></span></div><a class="btn btn-primary" href="checkout.html">Finalizar pedido</a><a class="btn btn-outline" href="carrito.html">Ver carrito completo</a></div></aside><div class="toast" id="toast"></div><script src="js/products.js"></script><script src="js/app.js"></script><script src="js/cart.js"></script></body></html>
-
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Sazu Accesorios: tecnología, moda, bolsos, relojes y fragancias."
+    />
+    <title>Sazu Accesorios</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="sharedHeader"></div>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">Tu estilo, tu ritmo, tu elección</span>
+            <h1>TODO LO QUE BUSCAS <span>EN UN SOLO LUGAR</span></h1>
+            <p>
+              Tecnología, moda, accesorios, relojes, bolsos y fragancias para
+              todos los estilos.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#productos">Comprar ahora →</a>
+              <a class="btn btn-outline" href="#categorias">Ver categorías</a>
+            </div>
+            <div class="trust">
+              <span>✓ Compra fácil</span>
+              <span>✓ Atención personalizada</span>
+              <span>✓ Cobertura nacional</span>
+            </div>
+          </div>
+          <div class="hero-photo">
+            <img
+              src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85"
+              alt="Tienda de moda y accesorios"
+            />
+            <div class="float a">
+              Venta al detal<small>Desde una unidad</small>
+            </div>
+            <div class="float b">
+              Precio mayorista<small>Haz crecer tu negocio</small>
+            </div>
+          </div>
+        </div>
+        <div class="container service-row">
+          <div>
+            <strong>Envíos nacionales</strong><small>A toda Colombia</small>
+          </div>
+          <div>
+            <strong>Detal y por mayor</strong
+            ><small>Compra como prefieras</small>
+          </div>
+          <div>
+            <strong>Compra con confianza</strong
+            ><small>Acompañamiento en cada pedido</small>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="categorias">
+        <div class="container">
+          <div class="section-title">
+            <div>
+              <span class="eyebrow">Nueve universos</span>
+              <h2>Explora nuestras categorías</h2>
+            </div>
+            <p>
+              Productos actuales y funcionales para diferentes estilos de vida.
+            </p>
+          </div>
+          <div class="categories">
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=800&q=80"
+                alt="Tecnología"
+              />
+              <div>
+                <h3>Tecnología</h3>
+                <button data-category="Tecnología">Ver productos</button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&q=80"
+                alt="Ropa caballero"
+              />
+              <div>
+                <h3>Ropa caballero</h3>
+                <button data-category="Ropa caballero">Ver productos</button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"
+                alt="Ropa dama"
+              />
+              <div>
+                <h3>Ropa dama</h3>
+                <button data-category="Ropa dama">Ver productos</button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+                alt="Bolsos caballero"
+              />
+              <div>
+                <h3>Bolsos caballero</h3>
+                <button data-category="Bolsos caballero">Ver productos</button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"
+                alt="Bolsos dama"
+              />
+              <div>
+                <h3>Bolsos dama</h3>
+                <button data-category="Bolsos dama">Ver productos</button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=800&q=80"
+                alt="Relojes caballero"
+              />
+              <div>
+                <h3>Relojes caballero</h3>
+                <button data-category="Relojes caballero">Ver productos</button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=800&q=80"
+                alt="Relojes dama"
+              />
+              <div>
+                <h3>Relojes dama</h3>
+                <button data-category="Relojes dama">Ver productos</button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=800&q=80"
+                alt="Lociones caballero"
+              />
+              <div>
+                <h3>Lociones caballero</h3>
+                <button data-category="Lociones caballero">
+                  Ver productos
+                </button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80"
+                alt="Lociones dama"
+              />
+              <div>
+                <h3>Lociones dama</h3>
+                <button data-category="Lociones dama">Ver productos</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section soft" id="productos">
+        <div class="container">
+          <div class="section-title">
+            <div>
+              <span class="eyebrow">Compra a tu manera</span>
+              <h2>Productos destacados</h2>
+            </div>
+            <p>Precios demostrativos para una experiencia realista.</p>
+          </div>
+          <div class="searchbar">
+            <input
+              id="search"
+              type="search"
+              placeholder="Buscar por producto o categoría..."
+              aria-label="Buscar"
+            /><button>⌕</button>
+          </div>
+          <div class="shop">
+            <aside class="filters">
+              <h3>Filtros</h3>
+              <div class="field">
+                <label>Categoría</label
+                ><select id="category">
+                  <option value="">Todas</option>
+                </select>
+              </div>
+              <div class="grid2">
+                <div class="field">
+                  <label>Precio mínimo</label
+                  ><input id="minPrice" type="number" />
+                </div>
+                <div class="field">
+                  <label>Precio máximo</label
+                  ><input id="maxPrice" type="number" />
+                </div>
+              </div>
+              <div class="field">
+                <label>Disponibilidad</label
+                ><select id="availability">
+                  <option value="">Todas</option>
+                  <option>Disponible</option>
+                  <option>Pocas unidades</option>
+                  <option>Agotado</option>
+                </select>
+              </div>
+              <label class="checks"
+                ><input type="checkbox" /> Venta al detal</label
+              ><label class="checks"
+                ><input type="checkbox" /> Venta al por mayor</label
+              ><button class="btn btn-outline btn-small" id="clear">
+                Limpiar
+              </button>
+            </aside>
+            <div>
+              <div class="toolbar">
+                <span id="productCount">18 productos</span
+                ><select id="sort">
+                  <option value="popular">Más populares</option>
+                  <option value="low">Menor precio</option>
+                  <option value="high">Mayor precio</option>
+                  <option value="new">Más recientes</option>
+                </select>
+              </div>
+              <div class="products" id="productGrid"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section wholesale" id="mayoristas">
+        <div class="container wholesale-grid">
+          <div>
+            <span class="eyebrow" style="color: #70d2c9"
+              >Para distribuidores</span
+            >
+            <h2>Compra al por mayor y haz crecer tu negocio</h2>
+            <p>
+              Precios especiales, portafolio variado y atención personalizada.
+            </p>
+            <div class="benefits">
+              <div class="benefit">
+                <strong>Precios especiales</strong><br /><small
+                  >Mejor margen por volumen.</small
+                >
+              </div>
+              <div class="benefit">
+                <strong>Atención personalizada</strong><br /><small
+                  >Acompañamiento en cada orden.</small
+                >
+              </div>
+              <div class="benefit">
+                <strong>Envíos nacionales</strong><br /><small
+                  >Despachos organizados.</small
+                >
+              </div>
+              <div class="benefit">
+                <strong>Catálogo variado</strong><br /><small
+                  >Nueve categorías.</small
+                >
+              </div>
+            </div>
+            <table class="volume">
+              <tr>
+                <th>Cantidad</th>
+                <th>Beneficio</th>
+              </tr>
+              <tr>
+                <td>1 a 5 unidades</td>
+                <td>Precio normal</td>
+              </tr>
+              <tr>
+                <td>6 a 12 unidades</td>
+                <td>Descuento básico · 8%</td>
+              </tr>
+              <tr>
+                <td>13 a 24 unidades</td>
+                <td>Descuento medio · 15%</td>
+              </tr>
+              <tr>
+                <td>25 o más</td>
+                <td>Precio mayorista · hasta 25%</td>
+              </tr>
+            </table>
+            <div class="hero-actions">
+              <a class="btn btn-outline" href="#productos"
+                >Ver catálogo mayorista</a
+              >
+            </div>
+          </div>
+          <form class="form-card" id="wholesaleForm">
+            <span class="eyebrow">Hablemos</span>
+            <h3>Solicita una cotización</h3>
+            <div class="grid2">
+              <div class="field"><label>Nombre</label><input required /></div>
+              <div class="field"><label>Negocio</label><input required /></div>
+              <div class="field"><label>Teléfono</label><input required /></div>
+              <div class="field"><label>Ciudad</label><input required /></div>
+            </div>
+            <div class="field">
+              <label>Productos de interés</label
+              ><textarea rows="4" required></textarea>
+            </div>
+            <button class="btn btn-primary">Enviar solicitud</button>
+            <p class="form-message" id="wholesaleMessage"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div id="sharedFooter"></div>
+    <div class="modal" id="productModal">
+      <div class="backdrop" data-close></div>
+      <div class="modal-panel">
+        <button class="icon close" data-close>×</button>
+        <div id="detailContent"></div>
+      </div>
+    </div>
+    <aside class="drawer" id="cartDrawer">
+      <div class="backdrop" data-close-drawer></div>
+      <div class="drawer-panel">
+        <div class="drawer-head">
+          <h2>Tu carrito</h2>
+          <button class="icon" data-close-drawer>×</button>
+        </div>
+        <div class="drawer-items" id="drawerItems"></div>
+        <div class="total grand">
+          <span>Total</span><span data-total></span>
+        </div>
+        <a class="btn btn-primary" href="checkout.html">Finalizar pedido</a
+        ><a class="btn btn-outline" href="carrito.html">Ver carrito completo</a>
+      </div>
+    </aside>
+    <div class="toast" id="toast"></div>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>
