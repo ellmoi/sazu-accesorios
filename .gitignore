@@ -1,0 +1,27 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Optional local tools and generated output
+node_modules/
+dist/
+build/
+coverage/
+logs/
+*.log
+tmp/
+*.tmp
+*.swp
+*.swo
+
+# Operating systems and local editors
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
