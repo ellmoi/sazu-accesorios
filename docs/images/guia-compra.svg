@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="title">
+<title id="title">Guía: explorar, agregar, revisar y confirmar una compra simulada</title>
+<rect width="1200" height="330" rx="24" fill="#eef6f4"/>
+<g font-family="Arial, sans-serif">
+<text x="40" y="57" fill="#163d40" font-size="28" font-weight="700">Tu primera compra de prueba</text>
+<path d="M145 125 H1045" stroke="#96bcb5" stroke-width="3"/>
+<g fill="#167a70"><circle cx="145" cy="125" r="27"/><circle cx="445" cy="125" r="27"/><circle cx="745" cy="125" r="27"/><circle cx="1045" cy="125" r="27"/></g>
+<g fill="white" font-size="24" font-weight="700" text-anchor="middle"><text x="145" y="133">1</text><text x="445" y="133">2</text><text x="745" y="133">3</text><text x="1045" y="133">4</text></g>
+<g fill="#163d40" font-size="23" font-weight="700" text-anchor="middle"><text x="145" y="195">Explora</text><text x="445" y="195">Agrega</text><text x="745" y="195">Revisa</text><text x="1045" y="195">Confirma</text></g>
+<g fill="#405d59" font-size="18" text-anchor="middle"><text x="145" y="229">Busca y filtra productos</text><text x="445" y="229">Elige lo que te gusta</text><text x="745" y="229">Ajusta las cantidades</text><text x="1045" y="229">Usa datos ficticios</text></g>
+<text x="600" y="292" fill="#167a70" font-size="18" text-anchor="middle">El pedido se guarda en tu navegador. No genera un cobro.</text>
+</g></svg>
