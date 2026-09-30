@@ -1,91 +1,129 @@
-# Sazu Accesorios
+﻿# SAZU Accesorios
 
-### [🌐 Abrir la tienda →](https://ellmoi.github.io/sazu-accesorios/)
+SAZU demuestra la gestión comercial de una tienda: conecta catálogo, inventario, clientes, niveles, descuentos, carrito, pedidos y seguimiento en una aplicación estática con administración local.
 
-Tienda de demostración para comprar al detal y al por mayor. Un proyecto de portafolio que convierte un catálogo en una experiencia de compra clara y organizada.
+## Demo
 
-![Resumen del proyecto](docs/images/proyecto.svg)
+**[Abrir SAZU en GitHub Pages](https://ellmoi.github.io/sazu-accesorios/)**. No necesitas instalar nada ni configurar servicios. Todo el recorrido es gratuito y se ejecuta en el navegador.
 
-## Qué demuestra
+## Probar SAZU
 
-- **Diseño adaptable:** páginas para computador y celular.
-- **JavaScript sin frameworks:** búsqueda, filtros, carrito y formularios.
-- **Lógica comercial:** precios al detal y mayoristas, cantidades y disponibilidad.
-- **Código organizado:** archivos separados para productos, clientes, pedidos e impresión.
+Recorrido orientativo de 3–5 minutos, usando el mismo navegador:
 
-## Qué puedes explorar
+1. Abre **Ingresar** y pulsa **Cliente demo**.
+2. En Productos, busca **Nova**, abre su detalle y agrega 2 unidades.
+3. En Carrito, revisa subtotal, descuento y total; finaliza el pedido con los datos ficticios precargados.
+4. Pulsa **Realizar pedido de demostración** y consulta **Mis pedidos**.
+5. En Ingresar, pulsa **Administrador demo**, abre Pedidos y cambia el nuevo pedido a **Enviado**.
+6. Vuelve a Cliente demo: el historial muestra el nuevo estado. Desde administración también puedes editar stock y cambiar el nivel del cliente.
+7. Para empezar de nuevo: Administración → Niveles y reglas → **Restablecer datos demo**.
 
-| Área | Funciones |
-| --- | --- |
-| Catálogo | 18 productos en 9 categorías; búsqueda y filtros por precio y disponibilidad. |
-| Compra | Detalle del producto, carrito editable y pedido simulado por pasos. |
-| Administración | 8 clientes y 10 pedidos de ejemplo; inventario, 7 estados de pedido e impresión. |
+| Cuenta        | Correo          | Contraseña pública de demostración |
+| ------------- | --------------- | ---------------------------------- |
+| Cliente       | cliente@demo.co | demo123                            |
+| Administrador | admin@demo.co   | admin123                           |
 
-## Prueba la tienda en 2 minutos
+Cliente Demo está vinculado al registro comercial ficticio de Laura Gómez, conservado del dataset original. El administrador no cuenta como cliente. No uses contraseñas ni datos personales reales.
 
-![Guía de compra en cuatro pasos](docs/images/guia-compra.svg)
+## Funcionalidades
 
-1. Abre la tienda y entra a **Productos**. Busca un producto o entra a **Categorías** para elegir una.
-2. Pulsa **Ver** para consultar sus detalles y **Agregar** para llevarlo al carrito.
-3. Abre el carrito, ajusta las cantidades y pulsa **Finalizar pedido**.
-4. Completa los pasos con datos ficticios y pulsa **Confirmar pedido**. No se cobra dinero.
+- Catálogo con búsqueda, categorías, precio, disponibilidad, ordenamiento y ofertas; filtros combinables y estados sin resultados.
+- Detalle según ID, cantidades validadas, favoritos locales y carrito persistente.
+- Inventario disponible, bajo y agotado; reserva al confirmar y devolución al cancelar un pedido nuevo.
+- Descuentos por producto, nivel y volumen calculados en un único módulo.
+- Checkout sin cobros, con identificación única y copia histórica de nombres, precios, cantidades y descuentos.
+- Historial por cliente, estados compartidos con administración e impresión de pedidos demo.
+- Administración de productos, stock, clientes, niveles, pedidos y solicitudes mayoristas locales.
+- Dashboard derivado de los datos: productos, clientes, pedidos, valor no cancelado, inventario y distribuciones por estado/nivel.
+- Restablecimiento confirmado, recuperación de almacenamiento corrupto y aviso ante almacenamiento bloqueado.
+- Diseño adaptable, tablas móviles en fichas, foco visible, etiquetas y diálogos con teclado.
 
-**Precio mayorista:** abre [el carrito completo](https://ellmoi.github.io/sazu-accesorios/carrito.html), selecciona la compra al por mayor y alcanza el mínimo indicado para el producto.
+## Flujo comercial
 
-**Administración:** abre [el panel](https://ellmoi.github.io/sazu-accesorios/admin.html) y entra a **Productos**, **Clientes** o **Pedidos**. En pedidos puedes filtrar estados, ver detalles y abrir una orden para imprimir.
+**Productos → Inventario → Clientes → Niveles → Descuentos → Carrito → Pedidos → Seguimiento**.
 
-## Cómo funciona
+El stock se valida al agregar y al confirmar. El pedido, la reducción de existencias y el vaciado del carrito se guardan juntos; si falla la escritura, no se confirma la compra. Los cambios administrativos de estado se reflejan en el historial. Los pedidos conservan su precio aunque luego se edite o retire el producto.
 
-**HTML5** organiza las páginas, **CSS3** define su apariencia y **JavaScript** controla las acciones. El carrito, la sesión de demostración y los pedidos nuevos se guardan en `localStorage`: la memoria de ese navegador.
+### Reglas de precios
 
-## Ejecución local
+Importes en COP, redondeados a pesos enteros por unidad. Los descuentos no se acumulan.
 
-Necesitas un navegador moderno con JavaScript y almacenamiento local habilitados. No hay dependencias de ejecución, instalación de paquetes ni compilación. Las fotografías de Unsplash requieren internet.
+- **Detal:** se aplica el menor precio entre la oferta del producto y el beneficio del nivel.
+- **Mayorista:** por cantidad de cada referencia, se aplica el menor precio entre el precio mayorista del producto (desde su mínimo) y el tramo por volumen: 6–12 unidades, 8%; 13–24, 15%; desde 25, 25% sobre lista.
+- **Niveles:** Nuevo 0%, Frecuente 3%, Preferencial 5%, VIP 8%; Mayorista activa el cálculo mayorista. Estos porcentajes de nivel son reglas explícitas de esta demo, añadidas durante la auditoría: el proyecto original solo contenía los nombres de los niveles.
+- Administración asigna niveles manualmente; no existe ascenso automático por compras.
+- Envío demo sin costo. Los siete estados son Pendiente, Confirmado, Preparando, Empacado, Enviado, Entregado y Cancelado. La demo permite cambios manuales; Cancelado no se reactiva y devuelve stock una sola vez en pedidos nuevos.
 
-```sh
-git clone https://github.com/ellmoi/sazu-accesorios.git
-cd sazu-accesorios
-```
+## Tecnologías
 
-Puedes abrir `index.html` directamente para explorar la interfaz. Para compartir de forma consistente el carrito y la sesión entre páginas, utiliza un servidor HTTP local. Si tienes Python 3:
+HTML, CSS y JavaScript sin frameworks ni dependencias de ejecución. JSON y localStorage para datos demo. Node.js 24 y su runner integrado se utilizan únicamente para verificaciones de desarrollo; Playwright es opcional para reproducir las comprobaciones de navegador. No hay build ni linter configurados.
+
+## Arquitectura
+
+Las 12 páginas HTML siguen en la raíz y utilizan rutas relativas compatibles con el subdirectorio de GitHub Pages.
+
+| Responsabilidad                                        | Archivos                                                  |
+| ------------------------------------------------------ | --------------------------------------------------------- |
+| Dataset inicial                                        | `js/products.js`, `js/clients.js`, `js/orders.js`         |
+| Reglas de precios, niveles y estados                   | `js/pricing.js`                                           |
+| Persistencia, migración, clientes y transacciones demo | `js/storage.js`                                           |
+| Navegación, catálogo, detalle, sesión y perfil         | `js/app.js`                                               |
+| Carrito y checkout                                     | `js/cart.js`                                              |
+| Administración e impresión                             | `js/admin.js`, `js/print.js`                              |
+| Presentación y recursos locales                        | `css/`, `assets/images/`                                  |
+| Verificación                                           | `scripts/check.mjs`, `test/`, `scripts/browser-check.cjs` |
+
+## Datos
+
+El dataset contiene **46 productos, 9 categorías, 8 clientes y 10 pedidos históricos**; cinco niveles, tres tramos de descuento y tres estados de inventario. Se conserva la ampliación de productos existente antes de esta auditoría.
+
+Los pedidos históricos originales contienen cantidades e importes globales, pero no un desglose fiable por producto. Se muestran como históricos, sin inventar precios unitarios o descuentos; los pedidos nuevos sí guardan el desglose completo. Las métricas de clientes se calculan con los pedidos disponibles, no con los acumulados ilustrativos del dataset original.
+
+`data/demo-products.json` y `data/demo-users.json` son exportaciones de referencia conservadas del trabajo previo, no otra fuente de datos activa. La aplicación usa las semillas JavaScript y no depende de solicitudes JSON. Las fotografías ilustrativas de Unsplash están copiadas localmente; su origen está en [assets/images/README.txt](assets/images/README.txt).
+
+## Persistencia
+
+`js/storage.js` concentra el acceso a localStorage en la clave versionada `sazuDemoV2`. Incluye productos, clientes, pedidos, usuarios demo, sesión, carrito, favoritos, solicitudes y modo de compra. Migra las claves anteriores cuando sus datos son válidos, sin eliminar información de otras aplicaciones.
+
+Al restablecer, se recuperan semillas independientes del inventario modificado y se cierra la sesión. Si el almacenamiento no permite escribir, se puede explorar el catálogo y se explica por qué no se pueden guardar cambios. Los favoritos y el carrito pertenecen al navegador; el historial se filtra por cliente. Las pestañas reciben actualizaciones locales mediante eventos de almacenamiento.
+
+## Modo demostración y limitaciones
+
+- No hay cobros, despacho, transportadoras conectadas, notificaciones ni cotizaciones enviadas a una empresa.
+- localStorage **no es una base de datos**: no hay sincronización entre dispositivos, respaldo central ni garantías de concurrencia entre varios usuarios.
+- La autenticación y los roles son **simulaciones locales**, manipulables desde el navegador. Las contraseñas demo son públicas y se guardan sin protección; nunca deben ser contraseñas personales.
+- Los clientes, pedidos y valores son ficticios. Las fotografías son de referencia; colores/tallas no tienen inventario independiente.
+- La cancelación de pedidos históricos no cambia el stock porque no existe su desglose original.
+- La verificación de interfaz se realizó en Chromium; no equivale a una certificación de accesibilidad ni una auditoría de seguridad para producción.
+
+## Ejecutar localmente
+
+Para evaluar el proyecto usa el enlace público. Para desarrollo, sirve la raíz con cualquier servidor estático. Por ejemplo, si tienes Python:
 
 ```sh
 python -m http.server 8000 --bind 127.0.0.1
 ```
 
-Abre `http://127.0.0.1:8000/`; el panel está en `/admin.html`. Mantén el mismo navegador, origen y puerto durante la compra. El almacenamiento de páginas abiertas con `file://` depende del navegador.
+Abre `http://127.0.0.1:8000/`. Usa HTTP local o HTTPS; abrir archivos con `file://` no reproduce correctamente el origen compartido y la persistencia de la demo.
 
-No se necesitan variables de entorno, claves API ni credenciales. Usa datos ficticios en los formularios.
+### Verificación de desarrollo
 
-## Estructura
+```sh
+node scripts/check.mjs
+node --test test/*.test.js
+git diff --check
+```
 
-| Ruta | Responsabilidad |
-| --- | --- |
-| `index.html` | Inicio y presentación de la tienda. |
-| `categorias.html`, `productos.html`, `ofertas.html`, `mayoristas.html` | Categorías, catálogo filtrable, productos con oferta y solicitud mayorista. |
-| Otras páginas `*.html` | Detalle, carrito, checkout, acceso, perfil y administración. |
-| `css/` | Estilos de tienda, administración e impresión. |
-| `js/products.js`, `clients.js`, `orders.js` | Datos de ejemplo; productos también define categorías, moneda e inventario. |
-| `js/app.js`, `cart.js`, `admin.js`, `print.js` | Interfaz compartida, carrito, panel y documentos imprimibles. |
-| `assets/` | Ubicación reservada para imágenes e iconos propios. |
-| `docs/` | Reporte del alcance e ilustraciones del README. |
-| `scripts/check.mjs` | Verificación estática sin dependencias externas. |
-| `.github/` | CI y plantilla de Pull Request. |
+Para repetir las pruebas de navegador, con Playwright instalado como herramienta de desarrollo y su Chromium disponible:
 
-Los scripts se cargan con etiquetas HTML y comparten datos mediante `window`; no hay framework, servidor de aplicación ni módulos de backend.
+```sh
+node scripts/browser-check.cjs ruta/al/modulo/playwright
+```
 
-## Desarrollo y verificación
+Ese script inicia un servidor temporal en el puerto 8001, sirve el sitio bajo `/sazu-accesorios/`, comprueba el recorrido comercial y 12 páginas en seis anchos, y guarda evidencia en `tmp/` (ignorado por Git). La herramienta no forma parte de los recursos publicados de la aplicación. CI ejecuta verificación estática y pruebas comerciales.
 
-Con Node.js 24, ejecuta `node scripts/check.mjs` y `git diff --check`. Se comprueban sintaxis JavaScript y referencias locales estáticas; no hay suite de pruebas funcionales, linter ni build configurados.
+## Evolución futura
 
-Trabajamos con `main` y ramas cortas por tarea, Pull Requests y Conventional Commits en inglés. Consulta [el flujo de trabajo](CONTRIBUTING.md).
+Un backend real permitiría una API, base de datos, inventario transaccional compartido, autenticación segura y permisos de servidor. Después podrían añadirse pagos y envíos reales con proveedores adecuados. Nada de eso es necesario para probar esta demo ni está presentado como implementado.
 
-## Alcance real
-
-Es un **prototipo de interfaz**, sin servidor ni base de datos compartida. El acceso y los pagos son simulados. Algunas acciones administrativas solo muestran mensajes o cambios temporales. Los pedidos nuevos no se integran al panel ni al historial del perfil.
-
-El detalle del catálogo se muestra en un modal; `producto.html` es una ficha fija de ejemplo. El panel es público y no aplica autenticación ni permisos. Consulta las limitaciones comerciales conocidas en el reporte antes de reutilizar la lógica para una tienda real.
-
-**Siguiente etapa:** conectar una base de datos, implementar acceso seguro y unificar pedidos, inventario y pagos.
-
-[Ver el reporte breve del proyecto](docs/REPORTE.md)
+Consulta el [reporte técnico](docs/REPORTE.md) y el [flujo de contribución](CONTRIBUTING.md).

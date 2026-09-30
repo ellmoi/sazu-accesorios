@@ -19,13 +19,13 @@ node scripts/check.mjs
 git diff --check
 ```
 
-El script comprueba sintaxis JavaScript y referencias locales estáticas en HTML, CSS y Markdown. No instala paquetes. No sustituye una prueba funcional ni valida enlaces externos o referencias construidas dinámicamente. No hay una suite de pruebas, linter ni build configurados.
+El script comprueba sintaxis JavaScript y referencias locales estáticas en HTML, CSS y Markdown. No instala paquetes. No sustituye una prueba funcional ni valida enlaces externos o referencias construidas dinámicamente. La suite comercial usa el runner integrado de Node: `node --test test/*.test.js`. No hay linter ni build configurados. Las comprobaciones opcionales de navegador se documentan en README.md.
 
 Si cambia la interfaz o la lógica, comprobar en un navegador el catálogo y sus filtros, el carrito al detal y mayorista, el pedido simulado, los formularios y las vistas administrativas afectadas. Usar datos ficticios. Documentar en el PR lo verificado y cualquier limitación.
 
 ## GitHub
 
-La acción `CI` ejecuta `Static checks` en Pull Requests a `main` y en cambios integrados. `main` está protegida: exige PR, rama actualizada, este check satisfactorio y conversaciones resueltas; bloquea force push y eliminación, también para administradores. No exige aprobaciones de terceros porque hay un único mantenedor. Está activada la eliminación automática de ramas integradas. Estas opciones se administran en GitHub; los archivos del repositorio no las activan por sí solos. Referencia: [protección de ramas en GitHub](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches).
+La acción `CI` ejecuta `Static checks` (referencias, sintaxis y pruebas comerciales) en Pull Requests a `main` y en cambios integrados. `main` está protegida: exige PR, rama actualizada, este check satisfactorio y conversaciones resueltas; bloquea force push y eliminación, también para administradores. No exige aprobaciones de terceros porque hay un único mantenedor. Está activada la eliminación automática de ramas integradas. Estas opciones se administran en GitHub; los archivos del repositorio no las activan por sí solos. Referencia: [protección de ramas en GitHub](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches).
 
 GitHub Pages sirve el sitio estático; no necesita un pipeline de compilación adicional. Usar Issues para errores o tareas concretas cuando aporten valor.
 

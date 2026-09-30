@@ -1,36 +1,35 @@
-﻿# Reporte del proyecto
+﻿# Auditoría técnica de SAZU Accesorios
 
-**Revisión:** 28 de septiembre de 2026.
+Revisión: 30 de septiembre de 2026. Clasificación local: **LISTO CON LIMITACIONES DOCUMENTADAS**. Es una demostración comercial estática, no una tienda preparada para operar con datos o pagos reales.
 
-**Estado:** prototipo frontend para portafolio. Muestra el recorrido de compra y una propuesta de administración comercial. Todavía no está preparado para operar una tienda real.
+1. **Estado inicial.** Rama `feature/separate-store-pages`, un commit por delante de `main`, 18 archivos modificados y datos, pricing, storage y pruebas sin versionar. Se conservó ese trabajo y el historial. Las verificaciones estáticas y dos pruebas de precios pasaban, pero no comprobaban el recorrido completo.
+2. **Arquitectura encontrada.** Doce páginas HTML en la raíz, CSS compartido, scripts globales JavaScript, semillas de productos/clientes/pedidos y persistencia dispersa en localStorage. GitHub Pages publicaba `main` mediante su despliegue estándar; no había compilación.
+3. **Funciones existentes.** Catálogo, categorías, ofertas, búsqueda, detalle dinámico parcialmente conectado, carrito, checkout simulado, login/registro, favoritos, perfil, administración e impresión. Existían 46 productos en el trabajo local, no los 18 de la documentación antigua.
+4. **Problemas encontrados.** Checkout sin reserva de stock ni copia de precios; resumen a precio de lista frente a total descontado; historial compartido entre usuarios; administración con clientes y métricas ficticias fijas; estados inconsistentes; cambios de productos perdidos al recargar; reset basado en productos ya modificados; ofertas sin filtro efectivo; beneficios y tramos sin cálculo; controles sin acción; cantidades fraccionarias; ausencia de tratamiento de errores de escritura; rutas de imagen externas con un 404 y asociaciones incorrectas; overflow de cabecera a 320 px.
+5. **Correcciones realizadas.** Precio único, persistencia versionada, migración de datos previos válidos, validación de cantidades/stock, escritura conjunta de pedido/inventario/carrito, reset desde semillas inmutables, escaping de texto en HTML dinámico, formularios con datos ficticios, fotos locales y mejoras de accesibilidad/responsive. Se retiraron controles decorativos y la plantilla duplicada del modal de producto.
+6. **Funciones conectadas.** Cliente → nivel → precio → carrito → checkout → pedido → stock → administración → estado → historial del cliente. Los nombres/precios del pedido se mantienen después de editar o eliminar el producto. Las solicitudes mayoristas locales se consultan en administración.
+7. **Archivos nuevos respecto a Git.** `js/pricing.js`, `js/storage.js`, `data/demo-products.json`, `data/demo-users.json`, `test/pricing.test.js` (procedían del trabajo local); `test/commerce.test.js`, `scripts/browser-check.cjs`, fotografías en `assets/images/catalog/` y `assets/images/product-fallback.svg` añadidos durante la auditoría.
+8. **Archivos modificados.** Las 12 páginas HTML; `js/app.js`, `js/cart.js`, `js/admin.js`, `js/products.js`, `js/clients.js`, `js/print.js`; los tres CSS; `assets/images/README.txt`; `README.md`, `CONTRIBUTING.md`, este reporte, `scripts/check.mjs` y `.github/workflows/ci.yml`. `js/orders.js` conserva los pedidos originales.
+9. **Datos utilizados.** 46 productos y 9 categorías; 8 clientes; 10 pedidos históricos; 5 niveles; 3 tramos mayoristas; inventario Disponible/Pocas unidades/Agotado; 7 estados de pedido. Dos cuentas de acceso demo; solo la cuenta cliente se vincula a un cliente comercial. Datos y fotografías son ilustrativos.
+10. **Lógica verificada.** Detal: mejor precio entre oferta y nivel. Mayorista: mejor precio entre precio por referencia desde su mínimo y tramos 8/15/25% desde 6/13/25 unidades por referencia. Sin acumulación; redondeo por unidad a pesos. Nuevo/Frecuente/Preferencial/VIP tienen 0/3/5/8%; Mayorista activa volumen. Esos porcentajes por nivel son nuevos y están declarados como reglas demo. Cancelar un pedido nuevo devuelve stock una vez; no se reactiva.
+11. **Pruebas.** 15 pruebas de Node cubren semillas, precios, niveles, límites de volumen, cantidades, duplicados, stock insuficiente, carrito obsoleto, pedido, conservación del precio, estados, cancelación, migración, reset, corrupción, registro e imposibilidad de confirmar al fallar la escritura. Verificación estática de sintaxis/referencias y `git diff --check`. Chromium: recorrido comercial completo, registro y separación de historiales, CRUD, mayorista, ofertas, producto inexistente, reset y corrupción; sin errores JavaScript en los recorridos ejecutados.
+12. **Responsive.** 12 páginas × 6 anchos: 320, 375, 425, 768, 1024 y 1440 px, sin overflow de documento. Se revisaron también las vistas administrativas, modal de edición, Escape/Tab, drawer y checkout poblado a 320 px. Tablas convertidas a fichas en móvil. Capturas de escritorio y móvil inspeccionadas visualmente. No se afirma cobertura de todos los navegadores ni conformidad WCAG certificada.
+13. **GitHub Pages.** URL: [demo pública](https://ellmoi.github.io/sazu-accesorios/). El sitio previo respondió HTTP 200 y el historial de Actions confirmó publicación desde `main`. La versión corregida se verifica localmente bajo `/sazu-accesorios/`, con referencias relativas y sin 404 de recursos en la matriz de navegador. La evidencia del despliegue remoto de cada revisión está en [Actions](https://github.com/ellmoi/sazu-accesorios/actions).
+14. **Operativas en demo.** Navegación, filtros, detalle, cantidades, carrito, descuentos, checkout, inventario, historial por cliente, cambios de estado/nivel, CRUD de productos, dashboard, solicitudes locales, impresión y restablecimiento.
+15. **Simuladas.** Autenticación, permisos, métodos de pago, envío y solicitudes comerciales. No se envían notificaciones ni solicitudes fuera del navegador. No se pide documento de identidad ni tarjeta.
+16. **Backend futuro.** Autenticación segura, autorización de servidor, API, base de datos, concurrencia real de inventario, respaldo/sincronización, pagos, envío y comunicaciones requieren implementación adicional.
+17. **Git.** Trabajo en `feature/portfolio-ready`, creada sobre la rama de trabajo anterior para conservar su commit y los cambios locales. Sin force push, rebase ni sustitución del historial. Integración mediante PR a `main`, con CI; el estado remoto verificable se encuentra en [Pull Requests](https://github.com/ellmoi/sazu-accesorios/pulls).
+18. **Commits.** Se separan implementación/verificación comercial y documentación de portafolio mediante Conventional Commits en inglés. Los identificadores definitivos quedan en el historial Git y en el reporte de entrega, evitando introducir en el propio commit un identificador que todavía no existe.
+19. **Limitaciones.** localStorage no es una base de datos ni ofrece concurrencia multiusuario. Credenciales demo públicas sin protección. Carrito y favoritos compartidos por navegador, historial filtrado por cliente sin garantía de privacidad. Pedidos históricos sin desglose original: se conserva su total y se indica esa limitación; no se inventa su contabilidad ni se altera stock al cancelarlos. Niveles manuales, inventario conjunto para variaciones, imágenes de referencia y validación de navegador limitada a Chromium.
+20. **Próximos pasos.** Para portafolio, mantener la demo y repetir las pruebas al modificar reglas. Para operación real, implementar primero backend, autenticación y stock transaccional; conectar pagos/envíos únicamente después. No se requieren servicios de pago para demostrar la versión actual.
 
-## Fortalezas
+## Evidencia reproducible
 
-- Catálogo con 18 productos y 9 categorías; 8 clientes y 10 pedidos de ejemplo.
-- Búsqueda, filtros, carrito y almacenamiento local de pedidos simulados.
-- Diseño adaptable, panel de gestión y documentos de impresión.
-- HTML, CSS y JavaScript sin frameworks ni proceso de compilación.
+```sh
+node scripts/check.mjs
+node --test test/*.test.js
+git diff --check
+node scripts/browser-check.cjs ruta/al/modulo/playwright
+```
 
-## Mejoras prioritarias
-
-| Prioridad | Hallazgo | Próximo paso |
-| --- | --- | --- |
-| Alta | Acceso simulado y panel sin protección. | Añadir autenticación y permisos en un servidor. |
-| Alta | Los nuevos pedidos, el panel y el perfil usan datos independientes. | Conectar las vistas a una fuente de datos común. |
-| Alta | Guardar o duplicar productos solo muestra mensajes; eliminar afecta la vista. | Implementar cambios persistentes. |
-| Media | `producto.html` muestra una ficha fija aunque reciba un identificador por URL. | Conectar la página de detalle con el catálogo. |
-| Media | El resumen muestra líneas a precio detal, aunque el total puede usar precio mayorista. | Unificar el cálculo de precios. |
-| Media | Los porcentajes por volumen anunciados no se calculan como tramos en el carrito. | Alinear la oferta con las reglas implementadas. |
-| Media | Se puede avanzar con carrito vacío; la cantidad del detalle necesita validación más estricta. | Validar cantidades positivas, existencias y carrito antes de confirmar. |
-
-## Verificación
-
-Se revisaron las páginas y la lógica JavaScript. El enlace público respondió **HTTP 200** y devolvió el título de Sazu Accesorios. No se realizó una prueba interactiva completa en navegador ni una auditoría de seguridad. Las imágenes del README son diagramas explicativos, no capturas.
-
-**Valor para un reclutador:** demuestra fundamentos de desarrollo web, manejo de eventos, diseño de interfaces y modelado de una compra, con un alcance transparente y mejoras concretas identificadas.
-
-## Organización del repositorio — 29 de septiembre de 2026
-
-Se conservaron las páginas y la lógica existentes. Los recursos propios quedan en `assets/`; se retiraron los dos archivos de orientación duplicados de `icons/` e `images/`. Se añadieron reglas de exclusión, formato de texto, flujo con ramas y PR, y una verificación estática para CI.
-
-La revisión local comprobó sintaxis de los siete scripts de la aplicación y el verificador, referencias locales y conteos de los datos de ejemplo. La búsqueda de patrones de credenciales en archivos e historial no encontró coincidencias; no equivale a una auditoría completa. No existe suite de pruebas funcionales, linter ni compilación. Esta revisión de organización no incluyó una prueba interactiva completa en navegador.
+El último comando es opcional para desarrollo: requiere Playwright y Chromium, inicia un servidor local en el puerto 8001 y guarda capturas/resultados en `tmp/`, ignorado por Git. El evaluador público no necesita estas herramientas. No hay build ni linter configurados.
