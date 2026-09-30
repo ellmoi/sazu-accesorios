@@ -40,3 +40,10 @@
     margin: 14mm;
   }
 }
+@media print {
+  .modal:not(.open),
+  #adminModal,
+  #floatingCart {
+    display: none !important;
+  }
+}

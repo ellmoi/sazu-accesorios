@@ -37,13 +37,20 @@
               </div>
             </div>
             <div id="cartItems"></div>
+            <button type="button" class="btn btn-outline" id="clearCart">
+              Vaciar carrito
+            </button>
           </section>
           <aside class="card sticky">
             <h2>Resumen</h2>
             <div class="total">
               <span>Subtotal</span><strong data-subtotal></strong>
             </div>
-            <div class="total"><span>Envío</span><span>Por calcular</span></div>
+            <div class="total">
+              <span>Descuentos</span><span data-discount></span>
+            </div>
+            <p data-benefit></p>
+            <p>Envío simulado sin costo.</p>
             <hr />
             <div class="total grand">
               <span>Total</span><span data-total></span>
@@ -62,8 +69,12 @@
       </section>
     </main>
     <div id="sharedFooter"></div>
-    <div class="toast" id="toast"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="js/products.js"></script>
+    <script src="js/clients.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/pricing.js"></script>
+    <script src="js/storage.js"></script>
     <script src="js/app.js"></script>
     <script src="js/cart.js"></script>
   </body>

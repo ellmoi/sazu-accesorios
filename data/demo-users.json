@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "clientId": 1,
+    "name": "Cliente Demo",
+    "email": "cliente@demo.co",
+    "password": "demo123",
+    "role": "customer"
+  },
+  {
+    "id": 2,
+    "name": "Administrador Demo",
+    "email": "admin@demo.co",
+    "password": "admin123",
+    "role": "admin"
+  }
+]

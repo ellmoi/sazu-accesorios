@@ -269,12 +269,14 @@ body {
   }
   .sidebar {
     position: fixed;
+    visibility: hidden;
     left: -270px;
     width: 250px;
     z-index: 100;
     transition: 0.25s;
   }
   .sidebar.open {
+    visibility: visible;
     left: 0;
   }
   .admin-menu {
@@ -304,5 +306,65 @@ body {
   }
   .admin-top .searchbar {
     width: 55%;
+  }
+}
+.data td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  max-width: 300px;
+}
+.admin-top {
+  gap: 12px;
+}
+.admin-top a {
+  font-size: 0.85rem;
+}
+@media (max-width: 650px) {
+  .data {
+    min-width: 0;
+  }
+  .data thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .data,
+  .data tbody,
+  .data tr,
+  .data td {
+    display: block;
+    width: 100%;
+    max-width: none;
+  }
+  .data tr {
+    padding: 12px;
+    border-bottom: 2px solid var(--line);
+  }
+  .data td {
+    padding: 6px 0;
+    border: 0;
+  }
+  .data td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 800;
+    color: var(--muted);
+    font-size: 0.7rem;
+  }
+  .data td select {
+    width: 100%;
+    padding: 10px;
+  }
+  .admin-content {
+    padding: 12px;
+  }
+  .admin-top .searchbar {
+    min-width: 0;
+    flex: 1;
+  }
+  .admin-top input {
+    padding: 10px;
   }
 }

@@ -58,17 +58,13 @@
                   <option>Agotado</option>
                 </select>
               </div>
-              <label class="checks"
-                ><input type="checkbox" /> Venta al detal</label
-              ><label class="checks"
-                ><input type="checkbox" /> Venta al por mayor</label
-              ><button class="btn btn-outline btn-small" id="clear">
+              <button class="btn btn-outline btn-small" id="clear">
                 Limpiar
               </button>
             </aside>
             <div>
               <div class="toolbar">
-                <span id="productCount">18 productos</span
+                <span id="productCount">Cargando productos</span
                 ><select id="sort">
                   <option value="popular">Más populares</option>
                   <option value="low">Menor precio</option>
@@ -83,13 +79,6 @@
       </section>
     </main>
     <div id="sharedFooter"></div>
-    <div class="modal" id="productModal">
-      <div class="backdrop" data-close></div>
-      <div class="modal-panel">
-        <button class="icon close" data-close>×</button>
-        <div id="detailContent"></div>
-      </div>
-    </div>
     <aside class="drawer" id="cartDrawer">
       <div class="backdrop" data-close-drawer></div>
       <div class="drawer-panel">
@@ -105,8 +94,12 @@
         ><a class="btn btn-outline" href="carrito.html">Ver carrito completo</a>
       </div>
     </aside>
-    <div class="toast" id="toast"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="js/products.js"></script>
+    <script src="js/clients.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/pricing.js"></script>
+    <script src="js/storage.js"></script>
     <script src="js/app.js"></script>
     <script src="js/cart.js"></script>
   </body>

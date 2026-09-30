@@ -18,7 +18,7 @@ let scripts = 0;
 let references = 0;
 for (const path of walk(root)) {
   const extension = extname(path);
-  if ([".js", ".mjs"].includes(extension)) {
+  if ([".js", ".mjs", ".cjs"].includes(extension)) {
     scripts++;
     const result = spawnSync(process.execPath, ["--check", path], { encoding: "utf8" });
     if (result.status !== 0) {

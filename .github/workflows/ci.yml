@@ -30,5 +30,7 @@ jobs:
           package-manager-cache: false
       - name: Check JavaScript and local references
         run: node scripts/check.mjs
+      - name: Verify commercial rules and persistence
+        run: node --test test/*.test.js
       - name: Check whitespace
         run: git diff --check HEAD^ HEAD

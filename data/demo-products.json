@@ -1,0 +1,923 @@
+[
+  {
+    "id": 1,
+    "code": "TEC-001",
+    "name": "Audífonos Nova Pro",
+    "category": "Tecnología",
+    "price": 129900,
+    "wholesale": 99900,
+    "min": 6,
+    "stock": 28,
+    "rating": 4.8,
+    "sales": 186,
+    "new": true,
+    "offer": 20,
+    "image": "assets/images/catalog/photo-1505740420928-5e560c06d30e.jpg",
+    "desc": "Sonido envolvente, Bluetooth 5.3 y batería de 30 horas.",
+    "variants": [
+      "Negro",
+      "Arena"
+    ]
+  },
+  {
+    "id": 2,
+    "code": "TEC-002",
+    "name": "Smartwatch Pulse S4",
+    "category": "Tecnología",
+    "price": 189900,
+    "wholesale": 149900,
+    "min": 6,
+    "stock": 9,
+    "rating": 4.7,
+    "sales": 162,
+    "new": true,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1523275335684-37898b6baf30.jpg",
+    "desc": "Pantalla AMOLED, llamadas y seguimiento deportivo.",
+    "variants": [
+      "Negro",
+      "Rosa"
+    ]
+  },
+  {
+    "id": 3,
+    "code": "TEC-003",
+    "name": "Teclado Compact Air",
+    "category": "Tecnología",
+    "price": 149900,
+    "wholesale": 114900,
+    "min": 6,
+    "stock": 0,
+    "rating": 4.6,
+    "sales": 98,
+    "new": false,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1587829741301-dc798b83add3.jpg",
+    "desc": "Teclado inalámbrico compacto y silencioso.",
+    "variants": [
+      "Blanco",
+      "Negro"
+    ]
+  },
+  {
+    "id": 4,
+    "code": "HOM-001",
+    "name": "Camisa Oxford Essential",
+    "category": "Ropa caballero",
+    "price": 119900,
+    "wholesale": 84900,
+    "min": 12,
+    "stock": 34,
+    "rating": 4.7,
+    "sales": 143,
+    "new": false,
+    "offer": 15,
+    "image": "assets/images/catalog/photo-1602810318383-e386cc2a3ccf.jpg",
+    "desc": "Algodón suave y corte moderno para todos los días.",
+    "variants": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 5,
+    "code": "HOM-002",
+    "name": "Chaqueta Urban Motion",
+    "category": "Ropa caballero",
+    "price": 219900,
+    "wholesale": 174900,
+    "min": 6,
+    "stock": 7,
+    "rating": 4.9,
+    "sales": 121,
+    "new": true,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1551028719-00167b16eac5.jpg",
+    "desc": "Chaqueta liviana con acabados urbanos.",
+    "variants": [
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 6,
+    "code": "DAM-001",
+    "name": "Vestido Aura Midi",
+    "category": "Ropa dama",
+    "price": 159900,
+    "wholesale": 119900,
+    "min": 6,
+    "stock": 22,
+    "rating": 4.9,
+    "sales": 174,
+    "new": true,
+    "offer": 10,
+    "image": "assets/images/catalog/photo-1595777457583-95e059d581b8.jpg",
+    "desc": "Silueta midi elegante y versátil.",
+    "variants": [
+      "S",
+      "M",
+      "L"
+    ]
+  },
+  {
+    "id": 7,
+    "code": "DAM-002",
+    "name": "Jean Sculpt Azul",
+    "category": "Ropa dama",
+    "price": 139900,
+    "wholesale": 104900,
+    "min": 12,
+    "stock": 18,
+    "rating": 4.6,
+    "sales": 119,
+    "new": false,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1541099649105-f69ad21f3246.jpg",
+    "desc": "Denim flexible de tiro alto.",
+    "variants": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ]
+  },
+  {
+    "id": 8,
+    "code": "BHC-001",
+    "name": "Morral Ejecutivo Atlas",
+    "category": "Bolsos caballero",
+    "price": 179900,
+    "wholesale": 134900,
+    "min": 6,
+    "stock": 14,
+    "rating": 4.8,
+    "sales": 132,
+    "new": false,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1553062407-98eeb64c6a62.jpg",
+    "desc": "Compartimento para portátil y material resistente.",
+    "variants": [
+      "Negro",
+      "Gris"
+    ]
+  },
+  {
+    "id": 9,
+    "code": "BHC-002",
+    "name": "Crossbody Nómada",
+    "category": "Bolsos caballero",
+    "price": 99900,
+    "wholesale": 74900,
+    "min": 12,
+    "stock": 5,
+    "rating": 4.5,
+    "sales": 84,
+    "new": false,
+    "offer": 20,
+    "image": "assets/images/catalog/photo-1622560480605-d83c853bc5c3.jpg",
+    "desc": "Compacto, seguro y cómodo para la ciudad.",
+    "variants": [
+      "Negro",
+      "Verde"
+    ]
+  },
+  {
+    "id": 10,
+    "code": "BDA-001",
+    "name": "Bolso Siena",
+    "category": "Bolsos dama",
+    "price": 169900,
+    "wholesale": 124900,
+    "min": 6,
+    "stock": 26,
+    "rating": 4.9,
+    "sales": 181,
+    "new": true,
+    "offer": 15,
+    "image": "assets/images/catalog/photo-1584917865442-de89df76afd3.jpg",
+    "desc": "Bolso estructurado con correa removible.",
+    "variants": [
+      "Camel",
+      "Negro",
+      "Marfil"
+    ]
+  },
+  {
+    "id": 11,
+    "code": "BDA-002",
+    "name": "Cartera Mini Élan",
+    "category": "Bolsos dama",
+    "price": 89900,
+    "wholesale": 64900,
+    "min": 12,
+    "stock": 8,
+    "rating": 4.6,
+    "sales": 96,
+    "new": false,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1566150905458-1bf1fc113f0d.jpg",
+    "desc": "Formato compacto con interior organizado.",
+    "variants": [
+      "Rosa",
+      "Negro"
+    ]
+  },
+  {
+    "id": 12,
+    "code": "RHC-001",
+    "name": "Executive Steel",
+    "category": "Relojes caballero",
+    "price": 249900,
+    "wholesale": 189900,
+    "min": 6,
+    "stock": 12,
+    "rating": 4.8,
+    "sales": 109,
+    "new": false,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1524592094714-0f0654e20314.jpg",
+    "desc": "Caja de acero y estilo ejecutivo atemporal.",
+    "variants": [
+      "Plateado",
+      "Negro"
+    ]
+  },
+  {
+    "id": 13,
+    "code": "RHC-002",
+    "name": "Sport Carbon",
+    "category": "Relojes caballero",
+    "price": 199900,
+    "wholesale": 154900,
+    "min": 6,
+    "stock": 0,
+    "rating": 4.4,
+    "sales": 71,
+    "new": false,
+    "offer": 25,
+    "image": "assets/images/catalog/photo-1522312346375-d1a52e2b99b3.jpg",
+    "desc": "Cronógrafo deportivo resistente al agua.",
+    "variants": [
+      "Negro"
+    ]
+  },
+  {
+    "id": 14,
+    "code": "RDA-001",
+    "name": "Lumière Rose",
+    "category": "Relojes dama",
+    "price": 229900,
+    "wholesale": 174900,
+    "min": 6,
+    "stock": 16,
+    "rating": 4.9,
+    "sales": 126,
+    "new": false,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1547996160-81dfa63595aa.jpg",
+    "desc": "Diseño delicado en tono rose gold.",
+    "variants": [
+      "Rose gold",
+      "Dorado"
+    ]
+  },
+  {
+    "id": 15,
+    "code": "RDA-002",
+    "name": "Smartwatch Bloom",
+    "category": "Relojes dama",
+    "price": 179900,
+    "wholesale": 139900,
+    "min": 6,
+    "stock": 6,
+    "rating": 4.7,
+    "sales": 141,
+    "new": true,
+    "offer": 10,
+    "image": "assets/images/catalog/photo-1579586337278-3befd40fd17a.jpg",
+    "desc": "Bienestar, deporte y notificaciones.",
+    "variants": [
+      "Rosa",
+      "Lavanda"
+    ]
+  },
+  {
+    "id": 16,
+    "code": "LHC-001",
+    "name": "Bosque Nocturno",
+    "category": "Lociones caballero",
+    "price": 139900,
+    "wholesale": 104900,
+    "min": 12,
+    "stock": 31,
+    "rating": 4.8,
+    "sales": 154,
+    "new": false,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1523293182086-7651a899d37f.jpg",
+    "desc": "Notas amaderadas, ámbar y fondo especiado.",
+    "variants": [
+      "100 ml"
+    ]
+  },
+  {
+    "id": 17,
+    "code": "LHC-002",
+    "name": "Fresh Route",
+    "category": "Lociones caballero",
+    "price": 119900,
+    "wholesale": 89900,
+    "min": 12,
+    "stock": 10,
+    "rating": 4.5,
+    "sales": 92,
+    "new": false,
+    "offer": 15,
+    "image": "assets/images/catalog/photo-1594035910387-fea47794261f.jpg",
+    "desc": "Fragancia fresca, cítrica y marina.",
+    "variants": [
+      "100 ml"
+    ]
+  },
+  {
+    "id": 18,
+    "code": "LDA-001",
+    "name": "Flor de Seda",
+    "category": "Lociones dama",
+    "price": 149900,
+    "wholesale": 109900,
+    "min": 12,
+    "stock": 24,
+    "rating": 4.9,
+    "sales": 167,
+    "new": true,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1541643600914-78b084683601.jpg",
+    "desc": "Fragancia floral elegante con vainilla suave.",
+    "variants": [
+      "80 ml"
+    ]
+  },
+  {
+    "id": 19,
+    "code": "TEC-004",
+    "name": "Cargador Turbo 65W",
+    "category": "Tecnología",
+    "price": 59900,
+    "wholesale": 44900,
+    "min": 12,
+    "stock": 35,
+    "rating": 4.7,
+    "sales": 95,
+    "new": false,
+    "offer": 10,
+    "image": "assets/images/catalog/photo-1596877445530-ad74838754c6.jpg",
+    "desc": "Carga rápida para portátil y móvil con seguridad inteligente.",
+    "variants": [
+      "USB-C"
+    ]
+  },
+  {
+    "id": 20,
+    "code": "TEC-005",
+    "name": "Mouse Ergon Aero",
+    "category": "Tecnología",
+    "price": 89900,
+    "wholesale": 65900,
+    "min": 12,
+    "stock": 42,
+    "rating": 4.6,
+    "sales": 88,
+    "new": false,
+    "offer": 15,
+    "image": "assets/images/catalog/photo-1527814050087-3793815479db.jpg",
+    "desc": "Ergonómico y preciso para trabajo diario.",
+    "variants": [
+      "Negro",
+      "Blanco"
+    ]
+  },
+  {
+    "id": 21,
+    "code": "TEC-006",
+    "name": "Monitor View 27",
+    "category": "Tecnología",
+    "price": 489900,
+    "wholesale": 389900,
+    "min": 6,
+    "stock": 11,
+    "rating": 4.8,
+    "sales": 76,
+    "new": true,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1527443224154-c4a3942d3acf.jpg",
+    "desc": "Panel Full HD para productividad y entretenimiento.",
+    "variants": [
+      "27\"",
+      "32\""
+    ]
+  },
+  {
+    "id": 22,
+    "code": "HOM-003",
+    "name": "Polo Signature Slim",
+    "category": "Ropa caballero",
+    "price": 89900,
+    "wholesale": 64900,
+    "min": 12,
+    "stock": 40,
+    "rating": 4.5,
+    "sales": 106,
+    "new": false,
+    "offer": 10,
+    "image": "assets/images/catalog/photo-1602810318383-e386cc2a3ccf.jpg",
+    "desc": "Polo de algodón con ajuste moderno.",
+    "variants": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 23,
+    "code": "HOM-004",
+    "name": "Pantalón Travel Flex",
+    "category": "Ropa caballero",
+    "price": 129900,
+    "wholesale": 97900,
+    "min": 12,
+    "stock": 29,
+    "rating": 4.7,
+    "sales": 112,
+    "new": true,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1473966968600-fa801b869a1a.jpg",
+    "desc": "Pantalón elegante para usar todos los días.",
+    "variants": [
+      "30",
+      "32",
+      "34"
+    ]
+  },
+  {
+    "id": 24,
+    "code": "HOM-005",
+    "name": "Camiseta Weekend",
+    "category": "Ropa caballero",
+    "price": 69900,
+    "wholesale": 48900,
+    "min": 12,
+    "stock": 52,
+    "rating": 4.4,
+    "sales": 92,
+    "new": false,
+    "offer": 20,
+    "image": "assets/images/catalog/photo-1560800125-e06c763fdc2c.jpg",
+    "desc": "Camiseta cómoda con corte casual y elegante.",
+    "variants": [
+      "S",
+      "M",
+      "L"
+    ]
+  },
+  {
+    "id": 25,
+    "code": "DAM-003",
+    "name": "Blazer Lina",
+    "category": "Ropa dama",
+    "price": 219900,
+    "wholesale": 169900,
+    "min": 6,
+    "stock": 20,
+    "rating": 4.8,
+    "sales": 118,
+    "new": true,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1529139574466-a303027c1d8b.jpg",
+    "desc": "Blazer estructurado para una imagen sofisticada.",
+    "variants": [
+      "S",
+      "M",
+      "L"
+    ]
+  },
+  {
+    "id": 26,
+    "code": "DAM-004",
+    "name": "Top Solstice",
+    "category": "Ropa dama",
+    "price": 79900,
+    "wholesale": 58900,
+    "min": 12,
+    "stock": 45,
+    "rating": 4.5,
+    "sales": 87,
+    "new": false,
+    "offer": 15,
+    "image": "assets/images/catalog/photo-1524504388940-b1c1722653e1.jpg",
+    "desc": "Top fresco, cómodo y versátil para diario.",
+    "variants": [
+      "S",
+      "M",
+      "L"
+    ]
+  },
+  {
+    "id": 27,
+    "code": "DAM-005",
+    "name": "Sandalia Paseo",
+    "category": "Ropa dama",
+    "price": 109900,
+    "wholesale": 82900,
+    "min": 12,
+    "stock": 24,
+    "rating": 4.6,
+    "sales": 90,
+    "new": false,
+    "offer": 10,
+    "image": "assets/images/catalog/photo-1625899845678-3fad6a4a1846.jpg",
+    "desc": "Sandalia ligera con detalle elegante.",
+    "variants": [
+      "35",
+      "36",
+      "37",
+      "38"
+    ]
+  },
+  {
+    "id": 28,
+    "code": "BHC-003",
+    "name": "Morral City Drift",
+    "category": "Bolsos caballero",
+    "price": 149900,
+    "wholesale": 119900,
+    "min": 12,
+    "stock": 18,
+    "rating": 4.6,
+    "sales": 88,
+    "new": false,
+    "offer": 5,
+    "image": "assets/images/catalog/photo-1553062407-98eeb64c6a62.jpg",
+    "desc": "Morral urbano pensado para desplazamientos diarios.",
+    "variants": [
+      "Negro",
+      "Cafe"
+    ]
+  },
+  {
+    "id": 29,
+    "code": "BHC-004",
+    "name": "Portfolio Edge",
+    "category": "Bolsos caballero",
+    "price": 169900,
+    "wholesale": 129900,
+    "min": 12,
+    "stock": 13,
+    "rating": 4.7,
+    "sales": 110,
+    "new": true,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1622560480605-d83c853bc5c3.jpg",
+    "desc": "Portafolio refinado para work-life balance.",
+    "variants": [
+      "Negro",
+      "Azul"
+    ]
+  },
+  {
+    "id": 30,
+    "code": "BHC-005",
+    "name": "Tote Urban Pack",
+    "category": "Bolsos caballero",
+    "price": 119900,
+    "wholesale": 89900,
+    "min": 12,
+    "stock": 22,
+    "rating": 4.4,
+    "sales": 75,
+    "new": false,
+    "offer": 20,
+    "image": "assets/images/catalog/photo-1553062407-98eeb64c6a62.jpg",
+    "desc": "Tote versátil para trabajo y estilo casual.",
+    "variants": [
+      "Gris",
+      "Negro"
+    ]
+  },
+  {
+    "id": 31,
+    "code": "BDA-003",
+    "name": "Bolso Arcadia",
+    "category": "Bolsos dama",
+    "price": 199900,
+    "wholesale": 149900,
+    "min": 6,
+    "stock": 17,
+    "rating": 4.8,
+    "sales": 118,
+    "new": true,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1594223274512-ad4803739b7c.jpg",
+    "desc": "Formato con asa superior y líneas limpias.",
+    "variants": [
+      "Marrón",
+      "Beige"
+    ]
+  },
+  {
+    "id": 32,
+    "code": "BDA-004",
+    "name": "Cartera Vela",
+    "category": "Bolsos dama",
+    "price": 94900,
+    "wholesale": 71900,
+    "min": 12,
+    "stock": 27,
+    "rating": 4.5,
+    "sales": 82,
+    "new": false,
+    "offer": 15,
+    "image": "assets/images/catalog/photo-1584917865442-de89df76afd3.jpg",
+    "desc": "Elegante y compacta para uso diario.",
+    "variants": [
+      "Rosa",
+      "Negro"
+    ]
+  },
+  {
+    "id": 33,
+    "code": "BDA-005",
+    "name": "Bolso Luna Midi",
+    "category": "Bolsos dama",
+    "price": 179900,
+    "wholesale": 129900,
+    "min": 6,
+    "stock": 16,
+    "rating": 4.7,
+    "sales": 101,
+    "new": false,
+    "offer": 10,
+    "image": "assets/images/catalog/photo-1590874103328-eac38a683ce7.jpg",
+    "desc": "Tamaño medio con estilo diario y sobrio.",
+    "variants": [
+      "Camel",
+      "Negro"
+    ]
+  },
+  {
+    "id": 34,
+    "code": "RHC-003",
+    "name": "City Chrono",
+    "category": "Relojes caballero",
+    "price": 219900,
+    "wholesale": 174900,
+    "min": 6,
+    "stock": 14,
+    "rating": 4.7,
+    "sales": 98,
+    "new": true,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1508057198894-247b23fe5ade.jpg",
+    "desc": "Cronógrafo urbano con diseño moderno.",
+    "variants": [
+      "Plateado",
+      "Negro"
+    ]
+  },
+  {
+    "id": 35,
+    "code": "RHC-004",
+    "name": "Ranger Field",
+    "category": "Relojes caballero",
+    "price": 239900,
+    "wholesale": 189900,
+    "min": 6,
+    "stock": 9,
+    "rating": 4.8,
+    "sales": 116,
+    "new": false,
+    "offer": 10,
+    "image": "assets/images/catalog/photo-1434056886845-dac89ffe9b56.jpg",
+    "desc": "Estilo versátil con resistencia y presencia.",
+    "variants": [
+      "Negro",
+      "Gris"
+    ]
+  },
+  {
+    "id": 36,
+    "code": "RHC-005",
+    "name": "Monarch Classic",
+    "category": "Relojes caballero",
+    "price": 279900,
+    "wholesale": 219900,
+    "min": 6,
+    "stock": 8,
+    "rating": 4.9,
+    "sales": 129,
+    "new": true,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1490367532201-b9bc1dc483f6.jpg",
+    "desc": "Diseño clásico para quienes priorizan estilo.",
+    "variants": [
+      "Dorado"
+    ]
+  },
+  {
+    "id": 37,
+    "code": "RDA-003",
+    "name": "Helio Petite",
+    "category": "Relojes dama",
+    "price": 189900,
+    "wholesale": 149900,
+    "min": 6,
+    "stock": 13,
+    "rating": 4.6,
+    "sales": 81,
+    "new": false,
+    "offer": 10,
+    "image": "assets/images/catalog/photo-1547996160-81dfa63595aa.jpg",
+    "desc": "Reloj delicado y cómodo para el día a día.",
+    "variants": [
+      "Rosa",
+      "Plateado"
+    ]
+  },
+  {
+    "id": 38,
+    "code": "RDA-004",
+    "name": "Luna Quartz",
+    "category": "Relojes dama",
+    "price": 209900,
+    "wholesale": 159900,
+    "min": 6,
+    "stock": 18,
+    "rating": 4.8,
+    "sales": 109,
+    "new": true,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1579586337278-3befd40fd17a.jpg",
+    "desc": "Reloj elegante con acabado premium.",
+    "variants": [
+      "Dorado",
+      "Rose gold"
+    ]
+  },
+  {
+    "id": 39,
+    "code": "RDA-005",
+    "name": "Flow Gold",
+    "category": "Relojes dama",
+    "price": 249900,
+    "wholesale": 194900,
+    "min": 6,
+    "stock": 12,
+    "rating": 4.9,
+    "sales": 121,
+    "new": false,
+    "offer": 5,
+    "image": "assets/images/catalog/photo-1523170335258-f5ed11844a49.jpg",
+    "desc": "Diseño con presencia y excelente acabado.",
+    "variants": [
+      "Dorado"
+    ]
+  },
+  {
+    "id": 40,
+    "code": "LHC-003",
+    "name": "Terreno Verde",
+    "category": "Lociones caballero",
+    "price": 129900,
+    "wholesale": 99900,
+    "min": 12,
+    "stock": 26,
+    "rating": 4.7,
+    "sales": 96,
+    "new": false,
+    "offer": 5,
+    "image": "assets/images/catalog/photo-1523293182086-7651a899d37f.jpg",
+    "desc": "Notas verdes con fondo madera y musgo.",
+    "variants": [
+      "100 ml"
+    ]
+  },
+  {
+    "id": 41,
+    "code": "LHC-004",
+    "name": "Noir Atelier",
+    "category": "Lociones caballero",
+    "price": 139900,
+    "wholesale": 109900,
+    "min": 12,
+    "stock": 18,
+    "rating": 4.8,
+    "sales": 103,
+    "new": true,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1541643600914-78b084683601.jpg",
+    "desc": "Combina cuero, ámbar y vainilla con profundidad.",
+    "variants": [
+      "100 ml"
+    ]
+  },
+  {
+    "id": 42,
+    "code": "LHC-005",
+    "name": "Velvet Motion",
+    "category": "Lociones caballero",
+    "price": 129900,
+    "wholesale": 95900,
+    "min": 12,
+    "stock": 22,
+    "rating": 4.6,
+    "sales": 87,
+    "new": false,
+    "offer": 15,
+    "image": "assets/images/catalog/photo-1594035910387-fea47794261f.jpg",
+    "desc": "Frescura elegante con un fondo más cálido.",
+    "variants": [
+      "100 ml"
+    ]
+  },
+  {
+    "id": 43,
+    "code": "LDA-002",
+    "name": "Nube Rosada",
+    "category": "Lociones dama",
+    "price": 139900,
+    "wholesale": 109900,
+    "min": 12,
+    "stock": 29,
+    "rating": 4.8,
+    "sales": 110,
+    "new": false,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1541643600914-78b084683601.jpg",
+    "desc": "Fragancia ligera con flores blancas y vainilla.",
+    "variants": [
+      "80 ml"
+    ]
+  },
+  {
+    "id": 44,
+    "code": "LDA-003",
+    "name": "Lirio Noche",
+    "category": "Lociones dama",
+    "price": 149900,
+    "wholesale": 114900,
+    "min": 12,
+    "stock": 25,
+    "rating": 4.7,
+    "sales": 99,
+    "new": true,
+    "offer": 5,
+    "image": "assets/images/catalog/photo-1523293182086-7651a899d37f.jpg",
+    "desc": "Frasco elegante para un aroma floral profundo.",
+    "variants": [
+      "80 ml"
+    ]
+  },
+  {
+    "id": 45,
+    "code": "LDA-004",
+    "name": "Pétalo Claro",
+    "category": "Lociones dama",
+    "price": 129900,
+    "wholesale": 94900,
+    "min": 12,
+    "stock": 31,
+    "rating": 4.6,
+    "sales": 90,
+    "new": false,
+    "offer": 15,
+    "image": "assets/images/catalog/photo-1541643600914-78b084683601.jpg",
+    "desc": "Fragancia fresca con una base suave y sedosa.",
+    "variants": [
+      "80 ml"
+    ]
+  },
+  {
+    "id": 46,
+    "code": "LDA-005",
+    "name": "Velvet Bloom",
+    "category": "Lociones dama",
+    "price": 159900,
+    "wholesale": 119900,
+    "min": 12,
+    "stock": 27,
+    "rating": 4.9,
+    "sales": 115,
+    "new": true,
+    "offer": 0,
+    "image": "assets/images/catalog/photo-1594035910387-fea47794261f.jpg",
+    "desc": "Fragancia floral con un final sedoso y cálido.",
+    "variants": [
+      "80 ml"
+    ]
+  }
+]
