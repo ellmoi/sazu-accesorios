@@ -27,10 +27,10 @@
   function shared() {
     const h = $("#sharedHeader");
     if (h)
-      h.innerHTML = `<div class="topbar">Envíos nacionales · Compra al detal o al por mayor · Demostración sin pagos reales</div><header class="header"><div class="container nav"><a class="brand" href="index.html">SAZU <span>ACCESORIOS</span></a><nav class="links"><a href="index.html">Inicio</a><a href="index.html#categorias">Categorías</a><a href="index.html#productos">Ofertas</a><a href="index.html#mayoristas">Venta al por mayor</a><a href="perfil.html">Mis pedidos</a></nav><div class="actions"><a class="icon desktop-only" href="login.html" aria-label="Iniciar sesión">♙</a><button class="icon desktop-only" data-demo aria-label="Favoritos">♡</button><button class="icon" data-open-cart aria-label="Carrito">🛒<span class="count" data-cart-count>0</span></button><button class="icon hamb" id="hamb" aria-label="Menú">☰</button></div></div><nav class="mobile" id="mobile"><a href="index.html">Inicio</a><a href="index.html#categorias">Categorías</a><a href="index.html#productos">Productos</a><a href="index.html#mayoristas">Mayoristas</a><a href="perfil.html">Mis pedidos</a><a href="login.html">Iniciar sesión</a><a href="registro.html">Registrarse</a></nav></header>`;
+      h.innerHTML = `<div class="topbar">Envíos nacionales · Compra al detal o al por mayor · Demostración sin pagos reales</div><header class="header"><div class="container nav"><a class="brand" href="index.html">SAZU <span>ACCESORIOS</span></a><nav class="links"><a href="index.html">Inicio</a><a href="categorias.html">Categorías</a><a href="productos.html">Productos</a><a href="ofertas.html">Ofertas</a><a href="mayoristas.html">Venta al por mayor</a><a href="perfil.html">Mis pedidos</a></nav><div class="actions"><a class="icon desktop-only" href="login.html" aria-label="Iniciar sesión">♙</a><button class="icon desktop-only" data-demo aria-label="Favoritos">♡</button><button class="icon" data-open-cart aria-label="Carrito">🛒<span class="count" data-cart-count>0</span></button><button class="icon hamb" id="hamb" aria-label="Menú">☰</button></div></div><nav class="mobile" id="mobile"><a href="index.html">Inicio</a><a href="categorias.html">Categorías</a><a href="productos.html">Productos</a><a href="ofertas.html">Ofertas</a><a href="mayoristas.html">Mayoristas</a><a href="perfil.html">Mis pedidos</a><a href="login.html">Iniciar sesión</a><a href="registro.html">Registrarse</a></nav></header>`;
     const f = $("#sharedFooter");
     if (f)
-      f.innerHTML = `<footer class="footer"><div class="container footer-grid"><div><a class="brand" href="index.html">SAZU <span>ACCESORIOS</span></a><p>Variedad para cada estilo. Compra al detal o impulsa tu negocio con precios mayoristas.</p></div><div><h3>Comprar</h3><a href="index.html#categorias">Categorías</a><a href="index.html#productos">Ofertas</a><a href="index.html#mayoristas">Mayoristas</a></div><div><h3>Mi cuenta</h3><a href="perfil.html">Mis pedidos</a><a href="carrito.html">Carrito</a><a href="login.html">Ingresar</a></div><div><h3>Administración</h3><a href="admin.html">Panel administrativo</a><a href="#" data-demo>Contacto</a></div></div><div class="container footer-bottom"><span>© 2026 Sazu Accesorios</span><span>Demostración visual · Datos simulados</span></div></footer>`;
+      f.innerHTML = `<footer class="footer"><div class="container footer-grid"><div><a class="brand" href="index.html">SAZU <span>ACCESORIOS</span></a><p>Variedad para cada estilo. Compra al detal o impulsa tu negocio con precios mayoristas.</p></div><div><h3>Comprar</h3><a href="categorias.html">Categorías</a><a href="productos.html">Productos</a><a href="ofertas.html">Ofertas</a><a href="mayoristas.html">Mayoristas</a></div><div><h3>Mi cuenta</h3><a href="perfil.html">Mis pedidos</a><a href="carrito.html">Carrito</a><a href="login.html">Ingresar</a></div><div><h3>Administración</h3><a href="admin.html">Panel administrativo</a><a href="#" data-demo>Contacto</a></div></div><div class="container footer-bottom"><span>© 2026 Sazu Accesorios</span><span>Demostración visual · Datos simulados</span></div></footer>`;
   }
   function productCard(p) {
     const state = inventory(p.stock),
@@ -68,6 +68,7 @@
       sort = $("#sort")?.value || "popular";
     let list = PRODUCTS.filter(
       (p) =>
+        (!g.hasAttribute("data-offers-only") || p.offer > 0) &&
         (!q || `${p.name} ${p.category} ${p.desc}`.toLowerCase().includes(q)) &&
         (!cat || p.category === cat) &&
         (!state || inventory(p.stock) === state) &&
@@ -98,7 +99,7 @@
       return;
     }
     $("#detailContent").innerHTML =
-      `<div class="detail"><div class="detail-img"><img src="${p.image}" alt="${p.name}"></div><div><span class="eyebrow">${p.category}</span><h1>${p.name}</h1><div class="rating">★ ${p.rating} · ${p.sales} ventas</div><p>${p.desc}</p><div class="price">${money(p.price)}</div><p class="wholesale-price">Precio mayorista ${money(p.wholesale)} · mínimo ${p.min} unidades</p><p class="stock ${inventory(p.stock).replace(" ", "-")}">${inventory(p.stock)} · ${p.stock} unidades</p><div class="field"><label>Variación</label><select>${p.variants.map((v) => `<option>${v}</option>`).join("")}</select></div><div class="field"><label>Cantidad</label><div class="qty"><button id="minus">−</button><input id="detailQty" value="1"><button id="plus">+</button></div></div><div class="hero-actions"><button class="btn btn-primary" id="detailAdd" ${p.stock ? "" : "disabled"}>Agregar al carrito</button><button class="btn btn-dark" id="detailBuy" ${p.stock ? "" : "disabled"}>Comprar ahora</button><a class="btn btn-outline" href="index.html#mayoristas">Comprar al por mayor</a></div><small>Envío nacional · Compra demostrativa</small></div></div>`;
+      `<div class="detail"><div class="detail-img"><img src="${p.image}" alt="${p.name}"></div><div><span class="eyebrow">${p.category}</span><h1>${p.name}</h1><div class="rating">★ ${p.rating} · ${p.sales} ventas</div><p>${p.desc}</p><div class="price">${money(p.price)}</div><p class="wholesale-price">Precio mayorista ${money(p.wholesale)} · mínimo ${p.min} unidades</p><p class="stock ${inventory(p.stock).replace(" ", "-")}">${inventory(p.stock)} · ${p.stock} unidades</p><div class="field"><label>Variación</label><select>${p.variants.map((v) => `<option>${v}</option>`).join("")}</select></div><div class="field"><label>Cantidad</label><div class="qty"><button id="minus">−</button><input id="detailQty" value="1"><button id="plus">+</button></div></div><div class="hero-actions"><button class="btn btn-primary" id="detailAdd" ${p.stock ? "" : "disabled"}>Agregar al carrito</button><button class="btn btn-dark" id="detailBuy" ${p.stock ? "" : "disabled"}>Comprar ahora</button><a class="btn btn-outline" href="mayoristas.html">Comprar al por mayor</a></div><small>Envío nacional · Compra demostrativa</small></div></div>`;
     m.classList.add("open");
     document.body.classList.add("lock");
     $("#minus").onclick = () =>
@@ -165,6 +166,25 @@
   }
   document.addEventListener("DOMContentLoaded", () => {
     shared();
+    const currentPage = location.pathname.split("/").pop() || "index.html";
+    if (currentPage === "index.html") {
+      const legacyPages = {
+        "#categorias": "categorias.html",
+        "#productos": "productos.html",
+        "#mayoristas": "mayoristas.html",
+      };
+      const destination = new URLSearchParams(location.search).has("category")
+        ? "productos.html"
+        : legacyPages[location.hash];
+      if (destination) {
+        location.replace(destination + location.search);
+        return;
+      }
+    }
+    $$("#sharedHeader nav a").forEach((link) => {
+      if (link.getAttribute("href") === currentPage)
+        link.setAttribute("aria-current", "page");
+    });
     $("#hamb")?.addEventListener("click", () =>
       $("#mobile").classList.toggle("open"),
     );
@@ -208,7 +228,7 @@
             render();
             $("#productos").scrollIntoView();
           } else
-            location.href = `index.html?category=${encodeURIComponent(b.dataset.category)}#productos`;
+            location.href = `productos.html?category=${encodeURIComponent(b.dataset.category)}#productos`;
         }),
     );
     const param = new URLSearchParams(location.search).get("category");

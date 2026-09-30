@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Explora las nueve categorías de Sazu Accesorios."
+    />
+    <title>Categorías | Sazu Accesorios</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="sharedHeader"></div>
+    <main>
+      <section class="section" id="categorias">
+        <div class="container">
+          <div class="section-title">
+            <div>
+              <span class="eyebrow">Nueve universos</span>
+              <h1 class="page-title">Explora nuestras categorías</h1>
+            </div>
+            <p>
+              Productos actuales y funcionales para diferentes estilos de vida.
+            </p>
+          </div>
+          <div class="categories">
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=800&q=80"
+                alt="Tecnología"
+              />
+              <div>
+                <h3>Tecnología</h3>
+                <button data-category="Tecnología">Ver productos</button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&q=80"
+                alt="Ropa caballero"
+              />
+              <div>
+                <h3>Ropa caballero</h3>
+                <button data-category="Ropa caballero">Ver productos</button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"
+                alt="Ropa dama"
+              />
+              <div>
+                <h3>Ropa dama</h3>
+                <button data-category="Ropa dama">Ver productos</button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+                alt="Bolsos caballero"
+              />
+              <div>
+                <h3>Bolsos caballero</h3>
+                <button data-category="Bolsos caballero">Ver productos</button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"
+                alt="Bolsos dama"
+              />
+              <div>
+                <h3>Bolsos dama</h3>
+                <button data-category="Bolsos dama">Ver productos</button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=800&q=80"
+                alt="Relojes caballero"
+              />
+              <div>
+                <h3>Relojes caballero</h3>
+                <button data-category="Relojes caballero">Ver productos</button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=800&q=80"
+                alt="Relojes dama"
+              />
+              <div>
+                <h3>Relojes dama</h3>
+                <button data-category="Relojes dama">Ver productos</button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=800&q=80"
+                alt="Lociones caballero"
+              />
+              <div>
+                <h3>Lociones caballero</h3>
+                <button data-category="Lociones caballero">
+                  Ver productos
+                </button>
+              </div>
+            </article>
+            <article class="category">
+              <img
+                src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80"
+                alt="Lociones dama"
+              />
+              <div>
+                <h3>Lociones dama</h3>
+                <button data-category="Lociones dama">Ver productos</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="sharedFooter"></div>
+    <aside class="drawer" id="cartDrawer">
+      <div class="backdrop" data-close-drawer></div>
+      <div class="drawer-panel">
+        <div class="drawer-head">
+          <h2>Tu carrito</h2>
+          <button class="icon" data-close-drawer>×</button>
+        </div>
+        <div class="drawer-items" id="drawerItems"></div>
+        <div class="total grand">
+          <span>Total</span><span data-total></span>
+        </div>
+        <a class="btn btn-primary" href="checkout.html">Finalizar pedido</a
+        ><a class="btn btn-outline" href="carrito.html">Ver carrito completo</a>
+      </div>
+    </aside>
+    <div class="toast" id="toast"></div>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

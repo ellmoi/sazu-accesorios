@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Consulta el catálogo y filtra por categoría, precio y disponibilidad."
+    />
+    <title>Productos | Sazu Accesorios</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="sharedHeader"></div>
+    <main>
+      <section class="section soft" id="productos">
+        <div class="container">
+          <div class="section-title">
+            <div>
+              <span class="eyebrow">Compra a tu manera</span>
+              <h1 class="page-title">Todos los productos</h1>
+            </div>
+            <p>Precios demostrativos para una experiencia realista.</p>
+          </div>
+          <div class="searchbar">
+            <input
+              id="search"
+              type="search"
+              placeholder="Buscar por producto o categoría..."
+              aria-label="Buscar"
+            /><button>⌕</button>
+          </div>
+          <div class="shop">
+            <aside class="filters">
+              <h3>Filtros</h3>
+              <div class="field">
+                <label>Categoría</label
+                ><select id="category">
+                  <option value="">Todas</option>
+                </select>
+              </div>
+              <div class="grid2">
+                <div class="field">
+                  <label>Precio mínimo</label
+                  ><input id="minPrice" type="number" />
+                </div>
+                <div class="field">
+                  <label>Precio máximo</label
+                  ><input id="maxPrice" type="number" />
+                </div>
+              </div>
+              <div class="field">
+                <label>Disponibilidad</label
+                ><select id="availability">
+                  <option value="">Todas</option>
+                  <option>Disponible</option>
+                  <option>Pocas unidades</option>
+                  <option>Agotado</option>
+                </select>
+              </div>
+              <label class="checks"
+                ><input type="checkbox" /> Venta al detal</label
+              ><label class="checks"
+                ><input type="checkbox" /> Venta al por mayor</label
+              ><button class="btn btn-outline btn-small" id="clear">
+                Limpiar
+              </button>
+            </aside>
+            <div>
+              <div class="toolbar">
+                <span id="productCount">18 productos</span
+                ><select id="sort">
+                  <option value="popular">Más populares</option>
+                  <option value="low">Menor precio</option>
+                  <option value="high">Mayor precio</option>
+                  <option value="new">Más recientes</option>
+                </select>
+              </div>
+              <div class="products" id="productGrid"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="sharedFooter"></div>
+    <div class="modal" id="productModal">
+      <div class="backdrop" data-close></div>
+      <div class="modal-panel">
+        <button class="icon close" data-close>×</button>
+        <div id="detailContent"></div>
+      </div>
+    </div>
+    <aside class="drawer" id="cartDrawer">
+      <div class="backdrop" data-close-drawer></div>
+      <div class="drawer-panel">
+        <div class="drawer-head">
+          <h2>Tu carrito</h2>
+          <button class="icon" data-close-drawer>×</button>
+        </div>
+        <div class="drawer-items" id="drawerItems"></div>
+        <div class="total grand">
+          <span>Total</span><span data-total></span>
+        </div>
+        <a class="btn btn-primary" href="checkout.html">Finalizar pedido</a
+        ><a class="btn btn-outline" href="carrito.html">Ver carrito completo</a>
+      </div>
+    </aside>
+    <div class="toast" id="toast"></div>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

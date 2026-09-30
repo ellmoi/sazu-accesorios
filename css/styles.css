@@ -121,7 +121,9 @@ button {
   font-weight: 800;
   margin-left: auto;
 }
-.links a:hover {
+.links a:hover,
+.links a[aria-current="page"],
+.mobile a[aria-current="page"] {
   color: var(--brand);
 }
 .actions {

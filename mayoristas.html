@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Conoce la venta al por mayor y solicita una cotización demostrativa."
+    />
+    <title>Mayoristas | Sazu Accesorios</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="sharedHeader"></div>
+    <main>
+      <section class="section wholesale" id="mayoristas">
+        <div class="container wholesale-grid">
+          <div>
+            <span class="eyebrow" style="color: #70d2c9"
+              >Para distribuidores</span
+            >
+            <h1 class="page-title">Compra al por mayor y haz crecer tu negocio</h1>
+            <p>
+              Precios especiales, portafolio variado y atención personalizada.
+            </p>
+            <div class="benefits">
+              <div class="benefit">
+                <strong>Precios especiales</strong><br /><small
+                  >Mejor margen por volumen.</small
+                >
+              </div>
+              <div class="benefit">
+                <strong>Atención personalizada</strong><br /><small
+                  >Acompañamiento en cada orden.</small
+                >
+              </div>
+              <div class="benefit">
+                <strong>Envíos nacionales</strong><br /><small
+                  >Despachos organizados.</small
+                >
+              </div>
+              <div class="benefit">
+                <strong>Catálogo variado</strong><br /><small
+                  >Nueve categorías.</small
+                >
+              </div>
+            </div>
+            <table class="volume">
+              <tr>
+                <th>Cantidad</th>
+                <th>Beneficio</th>
+              </tr>
+              <tr>
+                <td>1 a 5 unidades</td>
+                <td>Precio normal</td>
+              </tr>
+              <tr>
+                <td>6 a 12 unidades</td>
+                <td>Descuento básico · 8%</td>
+              </tr>
+              <tr>
+                <td>13 a 24 unidades</td>
+                <td>Descuento medio · 15%</td>
+              </tr>
+              <tr>
+                <td>25 o más</td>
+                <td>Precio mayorista · hasta 25%</td>
+              </tr>
+            </table>
+            <div class="hero-actions">
+              <a class="btn btn-outline" href="productos.html"
+                >Ver catálogo mayorista</a
+              >
+            </div>
+          </div>
+          <form class="form-card" id="wholesaleForm">
+            <span class="eyebrow">Hablemos</span>
+            <h3>Solicita una cotización</h3>
+            <div class="grid2">
+              <div class="field"><label>Nombre</label><input required /></div>
+              <div class="field"><label>Negocio</label><input required /></div>
+              <div class="field"><label>Teléfono</label><input required /></div>
+              <div class="field"><label>Ciudad</label><input required /></div>
+            </div>
+            <div class="field">
+              <label>Productos de interés</label
+              ><textarea rows="4" required></textarea>
+            </div>
+            <button class="btn btn-primary">Enviar solicitud</button>
+            <p class="form-message" id="wholesaleMessage"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div id="sharedFooter"></div>
+    <aside class="drawer" id="cartDrawer">
+      <div class="backdrop" data-close-drawer></div>
+      <div class="drawer-panel">
+        <div class="drawer-head">
+          <h2>Tu carrito</h2>
+          <button class="icon" data-close-drawer>×</button>
+        </div>
+        <div class="drawer-items" id="drawerItems"></div>
+        <div class="total grand">
+          <span>Total</span><span data-total></span>
+        </div>
+        <a class="btn btn-primary" href="checkout.html">Finalizar pedido</a
+        ><a class="btn btn-outline" href="carrito.html">Ver carrito completo</a>
+      </div>
+    </aside>
+    <div class="toast" id="toast"></div>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

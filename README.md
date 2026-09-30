@@ -25,7 +25,7 @@ Tienda de demostración para comprar al detal y al por mayor. Un proyecto de por
 
 ![Guía de compra en cuatro pasos](docs/images/guia-compra.svg)
 
-1. Abre la tienda y baja a **Productos destacados**. Busca un producto o elige una categoría.
+1. Abre la tienda y entra a **Productos**. Busca un producto o entra a **Categorías** para elegir una.
 2. Pulsa **Ver** para consultar sus detalles y **Agregar** para llevarlo al carrito.
 3. Abre el carrito, ajusta las cantidades y pulsa **Finalizar pedido**.
 4. Completa los pasos con datos ficticios y pulsa **Confirmar pedido**. No se cobra dinero.
@@ -61,7 +61,9 @@ No se necesitan variables de entorno, claves API ni credenciales. Usa datos fict
 
 | Ruta | Responsabilidad |
 | --- | --- |
-| `*.html` | Catálogo, detalle, carrito, checkout, acceso, perfil y administración. |
+| `index.html` | Inicio y presentación de la tienda. |
+| `categorias.html`, `productos.html`, `ofertas.html`, `mayoristas.html` | Categorías, catálogo filtrable, productos con oferta y solicitud mayorista. |
+| Otras páginas `*.html` | Detalle, carrito, checkout, acceso, perfil y administración. |
 | `css/` | Estilos de tienda, administración e impresión. |
 | `js/products.js`, `clients.js`, `orders.js` | Datos de ejemplo; productos también define categorías, moneda e inventario. |
 | `js/app.js`, `cart.js`, `admin.js`, `print.js` | Interfaz compartida, carrito, panel y documentos imprimibles. |
